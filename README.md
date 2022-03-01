@@ -6,7 +6,7 @@ Orange is a software suitable to teach many aspects of machine learning. In many
 
 These workflows with components and connections are easily extendable with own Python scripts to add functionality. Here are some of my scripts, which help to make clear different aspects in machine learning:
 * display a validation curve
-* display a lerning curve
+* display a learning curve
 * display a scatter matrix plot
 * generate polynomial and interaction features out of the existing ones (for example to use linear regression for modeling nonlinear functions)
 * display partition boundarys for classification with two numeric features (for example to visualize overfitting)
