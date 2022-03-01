@@ -1,5 +1,5 @@
 # orange-support-files
-my scripts to extend funktionality to Orange, a machine learning and data visualization software from https://orangedatamining.com
+my scripts to extend functionality to Orange, a machine learning and data visualization software from https://orangedatamining.com
 
 
 Orange is a software suitable to teach many aspects of machine learning. In many cases, the students don't need to code themself. Instead, they place components on a canvas with different functionality and connect the components to create data flows.
