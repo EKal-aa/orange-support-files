@@ -10,3 +10,4 @@ See the following links for more information about the individual scripts.
 
 [Diagram_partition_boundaries.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/diagram_partition_boundaries.md)
 
+[PolyFeatures.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/polyfeatures.md)
