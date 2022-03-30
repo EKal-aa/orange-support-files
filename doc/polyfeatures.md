@@ -16,11 +16,12 @@ Usage in the canvas
 
 ![](images/polyfeatures_01.png)
 
-Data befor transformation with PolyFeatures
+## Data befor transformation with PolyFeatures
 
 ![](images/polyfeatures_02.png)
 
-Data after transformation with PolyFeatures
+## Data after transformation with PolyFeatures
+with the following settings
 ```
 ###########################################################
 # Settings:
@@ -30,7 +31,7 @@ degree = 2     # maximal degree of the polynomial features
 
 ![](images/polyfeatures_03.png)
 
-
+Tree additional features, generated as polynomial combinations of the two original features.
 
 
 
