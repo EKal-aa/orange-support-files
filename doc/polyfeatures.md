@@ -35,6 +35,16 @@ Tree additional features, generated as polynomial combinations of the two origin
 
 ## Application: Use to model nonlinear funktions with linear regression widget
 
+![](images/polyfeatures_05.png)
+
+![](images/polyfeatures_06.png)
+
+Data after transformation with PolyFeatures
+with the __degrees = 3__
+
+![](images/polyfeatures_07.png)
+
+![](images/polyfeatures_08.png)
 
 
 
