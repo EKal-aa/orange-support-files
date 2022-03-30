@@ -1,6 +1,6 @@
 # Documentation for orange-support-files
 
-Every script has a short  doc-string and most of the scripts have a section for settings.
+Every script has a short  doc-string and most of the scripts have a section for settings. The easiest way to use them is to copy and past the Python widget with the needed script in your Orange-Canvas.
 
 See the following links for more information about the individual scripts.
 
