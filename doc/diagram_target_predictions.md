@@ -50,3 +50,104 @@ Only the input data, no predictions (which are stored as metadata) are shown. In
 
 ![](images/dia_target_pred_03.png)
 
+## metadata = True and prediction_model = 1
+
+```
+#################################
+# Settings:
+metadata = True             # False  if metadata/predictions 
+                               should not be shown
+#                              True   if metadata/predictions 
+                               should be shown
+enforce_2D = False           # True   if 2D-diagram should be 
+                               shown, although 
+#                              two dimensions (features) are 
+                               available in input data
+scatter_prediction = True    # True -> dots, False -> lines 
+                               for metadata/predictions 
+#                              in 2D-diagram
+prediction_model = 1         # Standard 1 for 1 column of 
+                               predictions in metadata or
+#                              first column of predictions; 
+#                              otherwise number of column, 
+                               whose predictions should be shown
+#####################################################
+
+```
+
+Predictions/Metadata from the first model are shown, too. 
+
+scatter_prediction = False would draw a line instead of crosses for the predictions. When the data is not sorted from min to max, crosses do look better.
+
+![](images/dia_target_pred_04.png)
+
+## metadata = True and prediction_model = 2
+
+```
+#################################
+# Settings:
+metadata = True             # False  if metadata/predictions 
+                               should not be shown
+#                              True   if metadata/predictions 
+                               should be shown
+enforce_2D = False           # True   if 2D-diagram should be 
+                               shown, although 
+#                              two dimensions (features) are 
+                               available in input data
+scatter_prediction = True    # True -> dots, False -> lines 
+                               for metadata/predictions 
+#                              in 2D-diagram
+prediction_model = 2         # Standard 1 for 1 column of 
+                               predictions in metadata or
+#                              first column of predictions; 
+#                              otherwise number of column, 
+                               whose predictions should be shown
+#####################################################
+
+```
+
+Predictions/Metadata from the second model are shown. 
+
+![](images/dia_target_pred_05.png)
+
+## One example with 3D-Diagram
+## enforce_2D = False
+
+```
+#################################
+# Settings:
+metadata = True             # False  if metadata/predictions 
+                               should not be shown
+#                              True   if metadata/predictions 
+                               should be shown
+enforce_2D = False           # True   if 2D-diagram should be 
+                               shown, although 
+#                              two dimensions (features) are 
+                               available in input data
+scatter_prediction = True    # True -> dots, False -> lines 
+                               for metadata/predictions 
+#                              in 2D-diagram
+prediction_model = 1         # Standard 1 for 1 column of 
+                               predictions in metadata or
+#                              first column of predictions; 
+#                              otherwise number of column, 
+                               whose predictions should be shown
+#####################################################
+
+```
+
+If exactly two features are in the data and with enforce_2D=False, a 3D-diagram is shown.
+With mouse actions, the diagram can be rotated and zoomed in.
+With metadata=False, only the (red) data points are shown.
+
+![](images/dia_target_pred_07.png)
+
+Data for 3D-diagrams:
+
+![](images/dia_target_pred_06.png)
+
+
+
+
+
+
