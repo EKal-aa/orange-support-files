@@ -33,6 +33,10 @@ degree = 2     # maximal degree of the polynomial features
 
 Tree additional features, generated as polynomial combinations of the two original features.
 
+## Application: Use to model nonlinear funktions with linear regression widget
+
+
+
 
 
 
