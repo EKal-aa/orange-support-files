@@ -76,7 +76,7 @@ prediction_model = 1         # Standard 1 for 1 column of
 
 Predictions/Metadata from the first model are shown, too. 
 
-scatter_prediction = False would draw a line instead of crosses for the predictions. When the data is not sorted from min to max, crosses do look better.
+__scatter_prediction = False__ would draw a line instead of crosses for the predictions. When the data is not sorted from min to max, crosses do look better.
 
 ![](images/dia_target_pred_04.png)
 
@@ -135,9 +135,9 @@ prediction_model = 1         # Standard 1 for 1 column of
 
 ```
 
-If exactly two features are in the data and with enforce_2D=False, a 3D-diagram is shown.
+If exactly two features are in the data and with __enforce_2D=False__, a 3D-diagram is shown.
 With mouse actions, the diagram can be rotated and zoomed in.
-With metadata=False, only the (red) data points are shown.
+With __metadata=False__, only the (red) data points are shown.
 
 ![](images/dia_target_pred_07.png)
 
