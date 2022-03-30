@@ -28,11 +28,11 @@ Data
 
 There are no settings for this script.
 
-# Setting in tree widget: Limit the maximal tree depth to: 4
+## Setting in tree widget: Limit the maximal tree depth to: 4
 
 ![](images/dia_partition_boundary_03.png)
 
-# Setting in tree widget: Limit the maximal tree depth to: 6
+## Setting in tree widget: Limit the maximal tree depth to: 6
 (with some overfitting)
 
 ![](images/dia_partition_boundary_04.png)
