@@ -15,7 +15,7 @@ To visualize example data from MNIST (handwritten numbers)
 
 Usage in the canvas
 
-![](images/polyfeatures_01.png)
+![](images/mnist-image_01.png)
 
 
 
