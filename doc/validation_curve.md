@@ -34,11 +34,24 @@ replicable = False          # WARNING: if using replicable=True, make sure to us
 
 ```
 
-Usage in the canvas
+## Usage in the canvas
+It is possible to realise a variation of hyperparameters (as shown here; number of neighbors is varied) to produce a validation curve. It is also possible to just compare some different learners, e.g. linear regression, kNN and AdaBoost,  in the diagram. 
 
-![](images/validation_curve_01.png)
+In the diagram, the names of the learners as defined in the learner widget are used.
 
+![](images/validation_curve_02.png)
 
+## score = "R2"
+
+![](images/validation_curve_03.png)
+
+## score = "MSE"
+
+![](images/validation_curve_04.png)
+
+## problem = "class"
+
+For classification problems, classification accuracy (CA) is used as performance criterion in the diagram.
 
 
 
