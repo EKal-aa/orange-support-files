@@ -53,5 +53,12 @@ In the diagram, the names of the learners as defined in the learner widget are u
 
 For classification problems, classification accuracy (CA) is used as performance criterion in the diagram.
 
+## save results = True
 
+With __save_results = True__ and defining the path __file_path = "E:/Downloads/"__ it is possible to save an excel file with the numerical results.
 
+## replicable = True
+
+With __replicable = False__ the data is shuffled in the script. 
+
+With __replicable = True__ the data is not shuffled, so that several runs of the script give the same results. Make sure that the data is shuffled, before it is used in the script!
