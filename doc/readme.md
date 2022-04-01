@@ -4,6 +4,10 @@ Every script has a short  doc-string and most of the scripts have a section for 
 
 See the following links for more information about the individual scripts.
 
+[Validation_curve.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/validation_curve.md)
+
+---
+
 [Diagram_target_predictions.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/diagram_target_predictions.md)
 
 [Diagram_target_predictions2D.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/diagram_target_predictions2D.md)
