@@ -13,7 +13,7 @@ To visualize example data from MNIST (handwritten numbers)
 
 ```
 
-The scripts has no settings.
+The script has no settings.
 
 Usage in the canvas
 
@@ -23,7 +23,7 @@ Data
 
 ![](images/mnist-image_02.PNG)
 
-Choose a subset of (eg. misclassified data) in confusion matrix
+Choose a subset of (eg. misclassified data) in confusion matrix. 
 (Here, the subset of instances, which are actual a 3 but are misclassified as 5, are selected.)
 
 ![](images/mnist-image_03.PNG)
