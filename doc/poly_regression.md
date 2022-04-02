@@ -30,3 +30,7 @@ alpha = 0.0001            # parameter alpha for L1- and L2-Regularization only
 ########################################################
 
 ```
+
+Usage in the canvas
+
+![](images/poly_reg_01.png)
