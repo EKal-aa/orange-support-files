@@ -1,4 +1,6 @@
 # Validation_curve.py
+Plots a validation curve with training- and cross validation score to compare different learner settings.
+Also the standard errors of the scores a indicated. (see also [validation curve in sklearn](https://scikit-learn.org/stable/modules/learning_curve.html#validation-curve))
 
 doc-string:
 
