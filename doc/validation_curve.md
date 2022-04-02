@@ -1,6 +1,6 @@
 # Validation_curve.py
 
-doc-string
+doc-string:
 
 ```
 * Widget input: data and some learners
@@ -18,7 +18,7 @@ Usage:
 
 ```
 
-Settings
+Settings:
 
 ```
 ##########################################################################
