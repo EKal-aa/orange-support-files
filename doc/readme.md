@@ -8,6 +8,8 @@ See the following links for more information about the individual scripts.
 
 [Learning_curve.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/learning_curve.md)
 
+[Plot_Scatter_Matrix.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/plot_scatter_matrix.md)
+
 ---
 
 [Diagram_target_predictions.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/diagram_target_predictions.md)
