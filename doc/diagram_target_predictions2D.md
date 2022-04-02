@@ -11,10 +11,19 @@ doc-string:
 
 Usage:
 * to visually show prediction performance and over-/underfitting
-
 ```
 
-Usage in the canvas
+Settings:
+```
+######################################################
+# Settings:
+prediction_model = 1         # Standard 1 for 1 connected model or the first connected model; 
+#                              otherwise number of model, whose predictions should be shown
+#####################################################
+```
+
+
+## Usage in the canvas
 
 ![](images/dia_target_pred2D_01.png)
 
