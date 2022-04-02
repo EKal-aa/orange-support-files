@@ -1,5 +1,6 @@
 # PolyFeatures.py
 Creates additional features as polynomial combinations of the input features (to use linear regression for modeling nonlinear functions).
+See also [Poly_Regression.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/poly_regression.md)
 
 docstring:
 
