@@ -1,4 +1,5 @@
 # PolyFeatures.py
+Creates additional features as polynomial combinations of the input features (to use linear regression for modeling nonlinear functions).
 
 docstring:
 
