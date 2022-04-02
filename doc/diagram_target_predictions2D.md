@@ -1,4 +1,5 @@
 # Diagram_target_predictions2D.py
+Plots numerical data together with predictions from a trained model in a 2D-diagram. Other than Diagram_target_predictions.py, a model must be connected and the predictions are shown in a continouus manner and not only for the known datapoints.
 
 doc-string:
 ```
