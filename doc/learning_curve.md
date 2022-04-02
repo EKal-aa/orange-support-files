@@ -17,7 +17,7 @@ Settings:
 #############################################################
 # Settings:
 problem = "reg"             # "class": classification or "reg": Regression
-score = "R2"                # "R2" or "RMSE"; only for regression
+score = "R2"                # "R2" or "RMSE"; only for regression 
 m = 20                      # number different training sizes
 save_results = False        # True: save Excelfile with results; False: don't save
 file_path = "E:/Downloads/" # file path for save_results
@@ -36,3 +36,8 @@ file_path = "E:/Downloads/" # file path for save_results
 ## Result
 
 ![](images/learning_curve_03.png)
+
+## save results = True
+
+With __save_results = True__ and defining the path __file_path = "E:/Downloads/"__ it is possible to save an excel file with the numerical results.
+
