@@ -18,6 +18,8 @@ See the following links for more information about the individual scripts.
 
 [PolyFeatures.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/polyfeatures.md)
 
+[Poly_Regression.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/poly_regression.md)
+
 [Display_MNIST-Image.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/display_MNIST-Image.md)
 
 
