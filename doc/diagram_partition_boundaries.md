@@ -1,6 +1,6 @@
 # Diagram_partition_boundaries.py
 
-doc-string
+doc-string:
 ```
 * Widget input: 
 - data with two numerical features, one categorical target
