@@ -18,15 +18,15 @@ ISBN 978-1491912058, 2017, from Jake VanderPlas
 
 ```
 
-Usage in the canvas
+There are no settings for this script.
+
+## Usage in the canvas
 
 ![](images/dia_partition_boundary_01.png)
 
-Data
+## Data
 
 ![](images/dia_partition_boundary_02.png)
-
-There are no settings for this script.
 
 ## Setting in tree widget: Limit the maximal tree depth to: 4
 
