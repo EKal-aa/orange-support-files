@@ -1,6 +1,6 @@
 # Poly_Regression.py
 
-doc-string
+doc-string:
 
 ```
 * Widget input: 
@@ -16,7 +16,7 @@ doc-string
 
 ```
 
-Settings
+Settings:
 ```
 ########################################################
 # Settings:
