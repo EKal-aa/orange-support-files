@@ -13,11 +13,35 @@ Usage:
 
 ```
 
-Usage in the canvas
+Settings:
+```
+#################################
+# Settings:
+metadata = False             # False  if metadata/predictions 
+                               should not be shown
+#                              True   if metadata/predictions 
+                               should be shown
+enforce_2D = False           # True   if 2D-diagram should be 
+                               shown, although 
+#                              two dimensions (features) are 
+                               available in input data
+scatter_prediction = True    # True -> dots, False -> lines 
+                               for metadata/predictions 
+#                              in 2D-diagram
+prediction_model = 1         # Standard 1 for 1 column of 
+                               predictions in metadata or
+#                              first column of predictions; 
+#                              otherwise number of column, 
+                               whose predictions should be shown
+#####################################################
+
+```
+
+## Usage in the canvas
 
 ![](images/dia_target_pred_01.png)
 
-Some examples with 2D-data.
+## Some examples with 2D-data.
 
 ![](images/dia_target_pred_02.png)
 
@@ -141,7 +165,7 @@ With __metadata=False__, only the (red) data points are shown.
 
 ![](images/dia_target_pred_07.png)
 
-Data for 3D-diagrams:
+## Data for 3D-diagrams:
 
 ![](images/dia_target_pred_06.png)
 
