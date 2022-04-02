@@ -6,6 +6,8 @@ See the following links for more information about the individual scripts.
 
 [Validation_curve.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/validation_curve.md)
 
+[Learning_curve.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/learning_curve.md)
+
 ---
 
 [Diagram_target_predictions.py](https://github.com/EKal-aa/orange-support-files/blob/main/doc/diagram_target_predictions.md)
