@@ -1,4 +1,5 @@
 # Diagram_partition_boundaries.py
+Plots a diagram with partition boundaries for a classification problem with two numerical features (to show over- or underfitting). 
 
 doc-string:
 ```
