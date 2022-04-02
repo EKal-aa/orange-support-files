@@ -1,4 +1,5 @@
 # Diagram_target_predictions.py
+Plots numerical data or data together with predictions in a 2D or 3D-diagram.
 
 doc-string:
 ```
