@@ -1,4 +1,5 @@
 # Display_MNIST-Image.py
+Visualize example data from MNIST dataset (handwritten numbers).
 
 doc-string:
 
