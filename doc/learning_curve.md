@@ -17,7 +17,7 @@ Settings:
 #############################################################
 # Settings:
 problem = "reg"             # "class": classification or "reg": Regression
-score = "RMSE"              # "R2" or "RMSE"; only for regression
+score = "R2"                # "R2" or "RMSE"; only for regression
 m = 20                      # number different training sizes
 save_results = False        # True: save Excelfile with results; False: don't save
 file_path = "E:/Downloads/" # file path for save_results
@@ -27,3 +27,12 @@ file_path = "E:/Downloads/" # file path for save_results
 
 ## Usage in the canvas
 
+![](images/learning_curve_01.png)
+
+## Data
+
+![](images/learning_curve_02.png)
+
+## Result
+
+![](images/learning_curve_03.png)
