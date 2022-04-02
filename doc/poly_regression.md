@@ -1,5 +1,5 @@
 # Poly_Regression.py
-Used to model nonlinear functions with polynomial regression
+Creates learner (and trained model) for polynomial regression to model nonlinear functions. (see also [polynomial regression in wikipedia](https://en.wikipedia.org/wiki/Polynomial_regression))
 
 
 doc-string:
