@@ -1,5 +1,5 @@
 # Learning_curve.py
-Plots a learning curve to show the effect of additional data to the model performance.
+Plots a learning curve to show the effect of additional data to the model performance. (see also [learning curve in sklearn](https://scikit-learn.org/stable/modules/learning_curve.html#learning-curve))
 
 doc-string:
 ```
