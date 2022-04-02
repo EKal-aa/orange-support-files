@@ -1,4 +1,5 @@
 # Plot_Scatter_Matrix.py 
+Plots a scatter matrix to see distribution and correlation of features.
 
 doc-string:
 ```
