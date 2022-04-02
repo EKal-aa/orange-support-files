@@ -1,4 +1,6 @@
 # Poly_Regression.py
+Used to model nonlinear functions with polynomial regression
+
 
 doc-string:
 
