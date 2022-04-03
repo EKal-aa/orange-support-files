@@ -20,7 +20,7 @@ All are written for the direct use in my lectures. Some are inspired or adapted 
 
 
 ## Usage
-- Open the file in folder ows-files with orange
+- Open the file (with the highest version number) in folder ows-files with orange
 - Copy and paste a widget in your own orangecanvas
 
 ![](doc/images/script_repo_01.png)
