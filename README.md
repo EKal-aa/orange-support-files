@@ -20,7 +20,8 @@ All are written for the direct use in my lectures. Some are inspired or adapted 
 
 
 ## Usage
-- Open the file (with the highest version number) in folder ows-files with orange
-- Copy and paste a widget in your own orange canvas
+- Download the Zip file of this repository. (klick teh green button "Code", than "Download ZIP". Decompress Zip file.
+- Open the file (with the highest version number) in folder ows-files with orange (and store it in a place convinient for you).
+- Copy and paste a widget in your own orange canvas.
 
 ![](doc/images/script_repo_01.png)
