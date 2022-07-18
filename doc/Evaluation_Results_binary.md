@@ -62,5 +62,8 @@ With this preparation, Evaluation_Results_binary.py computes a new confusion mat
 
 ![](images/evaluation-results-binary_05.png)
 
+If we lower the decision threshold to 0.277, we get no false negatives, but more false positives.
+
+We can get suitable values for the decision threshold out of the ROC Analysis Widget. When we position the mouse pointer over the corners of the ROC, the corresponding threshold is shown.
 
 
