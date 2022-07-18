@@ -37,3 +37,6 @@ There are no settings for this script.
 (with some overfitting)
 
 ![](images/dia_partition_boundary_04.png)
+
+## Example flow
+Example 5 - Diagram_partition_boundaries.ows
