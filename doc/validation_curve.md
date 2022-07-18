@@ -64,3 +64,6 @@ With __save_results = True__ and defining the path __file_path = "E:/Downloads/"
 With __replicable = False__ the data is shuffled in the script. 
 
 With __replicable = True__ the data is not shuffled, so that several runs of the script give the same results. Make sure that the data is shuffled, before it is used in the script!
+
+## Example flow
+Example 4 - Validation Curve.ows
