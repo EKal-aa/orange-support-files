@@ -38,4 +38,6 @@ Image is shown in graphics window
 
 ![](images/mnist-image_05.PNG)
 
+## Example flow
+No example flow available
 
