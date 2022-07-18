@@ -50,13 +50,17 @@ Of course the Evaluation_Results_binary.py come to the same results.
 
 ![](images/evaluation-results-binary_03.png)
 
-If for our application it is necessary, to avoid false positives (also if this means, that we get more classification errors overall), we can use the trained classifier, use the calculated probybilities for the positiv class (which are stored in the metas as "Logistic Regression (1)" after Test and Score) and compute a new output with a different decision threshold. 
+If for our application it is necessary, to avoid false positives (also if this means, that we get more classification errors overall), we can use the trained classifier, use the calculated probabilities for the positiv class (which are stored in the metas as "Logistic Regression (1)" after Test and Score) and compute a new output with a different decision threshold. 
 
-As standard, if the probability for the positiv class is higher than 0.5, the positiv class is predicted. In Feature constructor, we a new feature "New Virginica" with a custom decision threshold. With Select Columns, the newly created feature becomes a meta. And the other former metas are ignored.
+As standard, if the probability for the positiv class is higher than 0.5, the positiv class is predicted. In Feature constructor, we create a new feature "New Virginica" with a custom decision threshold. With Select Columns, the newly created feature becomes a meta. And the other former metas are ignored.
+
+
+![](images/evaluation-results-binary_04.png)
 
 With this preparation, Evaluation_Results_binary.py computes a new canfusion matrix and performance criteria. If we use 0.655 for the decision threshold in Feature Constructor Widget, than we get zero false positives, but more false negatives instead. The total number of missclassifications are higher than the standard from above. But if it's very important to get no false positives in our predictions, we can construct our custom output and we can use Evaluation_Results_binary.py to show the performance criteria.
 
 
+![](images/evaluation-results-binary_05.png)
 
 
 
