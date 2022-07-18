@@ -56,7 +56,10 @@ prediction_model = 2         # Standard 1 for 1 connected model or the first con
 
 ![](images/dia_target_pred2D_04.png)
 
+## Example flows
+Example 1 - Polynomial Regression and Diagrams.ows
 
+Example 3 - Learning Curve.ows
 
 
 
