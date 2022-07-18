@@ -57,8 +57,6 @@ with the __degrees = 3__
 
 ![](images/polyfeatures_08.png)
 
-
-
-
-
+## Example flow
+Example 1 - Polynomial Regression and Diagrams.ows
 
