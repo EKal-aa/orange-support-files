@@ -21,7 +21,7 @@ All are written for the direct use in my lectures. Some are inspired or adapted 
 
 
 ## Usage
-- Download the Zip file of this repository. (click the green button "Code", than "Download ZIP". Decompress Zip file.
+- Download the Zip file of this repository (click the green button "Code", than "Download ZIP". Decompress Zip file).
 - Open the file (with the highest version number) in folder ows-files with orange (and store it in a place convinient for you).
 - Copy and paste a widget in your own orange canvas.
 - See also documentation ([Some documentation for the scripts](https://github.com/EKal-aa/orange-support-files/blob/main/doc/readme.md)).
