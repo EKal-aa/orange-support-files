@@ -11,11 +11,10 @@ doc-string:
 
 * Widget output: 
     - learner on learner-output, if no data on input
-    - learner and trained model on classifier-output, if data on input
+    - learner on learner-output and trained model on classifier-output, if data on input
 
 * Creates a learner for polynomial regression, which can be used e.g. in Test and Score-Widget
 * Additionally creates a trained model, if training data is connectet to data-input, e.g. for Predictions-Widget
-
 ```
 
 Settings:
@@ -51,3 +50,8 @@ as shown by Diagram_target_predictions2D.py:
 as shown by Test and Score Widget in the second flow:
 
 ![](images/poly_reg_04.png)
+
+## Example flows
+Example 1 - Polynomial Regression and Diagrams.ows
+
+Example 2 - 3D-diagram.ows
