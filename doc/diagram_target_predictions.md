@@ -170,7 +170,9 @@ With __metadata=False__, only the (red) data points are shown.
 
 ![](images/dia_target_pred_06.png)
 
-
+## Example flows
+Example 1 - Polynomial Regression and Diagrams.ows
+Example 2 - 3D-diagram.ows
 
 
 
