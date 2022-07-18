@@ -15,6 +15,7 @@ These workflows with components and connections are easily extendable with own P
 * display partition boundarys for classification with two numeric features (for example to visualize overfitting)
 * display numerical data for regression in 2D- and 3D-diagrams with targets and predictions (for example to visualize overfitting)
 * display an image of a selectable handwritten number out of the MNIST dataset
+* compute performance criteria and confusion matrix when a custom decision threshold is used
 
 All are written for the direct use in my lectures. Some are inspired or adapted from Textbooks.
 
