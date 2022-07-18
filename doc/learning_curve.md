@@ -42,3 +42,5 @@ file_path = "E:/Downloads/" # file path for save_results
 
 With __save_results = True__ and defining the path __file_path = "E:/Downloads/"__ it is possible to save an excel file with the numerical results.
 
+## Example flow
+Example 3 - Learning Curve.ows
