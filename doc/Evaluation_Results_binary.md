@@ -57,7 +57,7 @@ As standard, if the probability for the positiv class is higher than 0.5, the po
 
 ![](images/evaluation-results-binary_04.png)
 
-With this preparation, Evaluation_Results_binary.py computes a new canfusion matrix and performance criteria. If we use 0.655 for the decision threshold in Feature Constructor Widget, than we get zero false positives, but more false negatives instead. The total number of missclassifications are higher than the standard from above. But if it's very important to get no false positives in our predictions, we can construct our custom output and we can use Evaluation_Results_binary.py to show the performance criteria.
+With this preparation, Evaluation_Results_binary.py computes a new confusion matrix and performance criteria. If we use 0.655 for the decision threshold in Feature Constructor Widget, than we get zero false positives, but more false negatives instead. The total number of missclassifications are higher than the standard from above. But if it's very important to get no false positives in our predictions, we can construct our custom output and we can use Evaluation_Results_binary.py to show the performance criteria.
 
 
 ![](images/evaluation-results-binary_05.png)
