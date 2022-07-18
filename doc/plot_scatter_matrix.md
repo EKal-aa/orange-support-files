@@ -18,3 +18,6 @@ The script has no setting.
 ## Result
 
 ![](images/plot_scatter_matrix_02.png)
+
+## Example flow
+Example 6 - Plot Scatter Matrix.ows
