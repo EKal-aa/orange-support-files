@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="Demo - Changing Decision Threshold" description="">
+	<nodes>
+		<node id="0" name="Datasets" qualified_name="Orange.widgets.data.owdatasets.OWDataSets" project_name="Orange3" version="" title="Datasets (iris)" position="(136.25, 149.75)" />
+		<node id="1" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="Test and Score" position="(433.0, 160.0)" />
+		<node id="2" name="Logistic Regression" qualified_name="Orange.widgets.model.owlogisticregression.OWLogisticRegression" project_name="Orange3" version="" title="Logistic Regression" position="(290.5, 271.75)" />
+		<node id="3" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns" position="(677.0, 255.0)" />
+		<node id="4" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table" position="(748.0, 412.0)" />
+		<node id="5" name="Feature Constructor" qualified_name="Orange.widgets.data.owfeatureconstructor.OWFeatureConstructor" project_name="Orange3" version="" title="Feature Constructor" position="(563.0, 254.0)" />
+		<node id="6" name="Edit Domain" qualified_name="Orange.widgets.data.oweditdomain.OWEditDomain" project_name="Orange3" version="" title="Edit Domain" position="(267.0, 152.0)" />
+		<node id="7" name="Confusion Matrix" qualified_name="Orange.widgets.evaluate.owconfusionmatrix.OWConfusionMatrix" project_name="Orange3" version="" title="Confusion Matrix" position="(874.0, 155.0)" />
+		<node id="8" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Evaluation_Results_binary.py" position="(880.0, 246.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="2" sink_node_id="1" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="1" source_node_id="3" sink_node_id="4" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="2" source_node_id="5" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="3" source_node_id="1" sink_node_id="5" source_channel="Predictions" sink_channel="Data" enabled="true" />
+		<link id="4" source_node_id="0" sink_node_id="6" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="5" source_node_id="6" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="6" source_node_id="1" sink_node_id="7" source_channel="Evaluation Results" sink_channel="Evaluation Results" enabled="true" />
+		<link id="7" source_node_id="3" sink_node_id="8" source_channel="Data" sink_channel="Data" enabled="true" />
+	</links>
+	<annotations>
+		<arrow id="0" start="(450.00000000000006, 404.0)" end="(522.0, 314.0)" fill="#C1272D" />
+		<arrow id="1" start="(766.0, 75.0)" end="(839.0, 125.0)" fill="#C1272D" />
+		<arrow id="2" start="(920.0, 424.0)" end="(877.0, 325.0)" fill="#C1272D" />
+		<text id="3" type="text/markdown" rect="(32.5, -97.0, 578.75, 101.0)" font-family="MS Shell Dlg 2" font-size="16"># Example Adjusting the Decision Threshold  
+Adjust the decision threshold in Feature Constructor Widget, to either reduce false positive rate or false negative rate.</text>
+		<arrow id="4" start="(175.0, 267.5)" end="(235.0, 181.25)" fill="#C1272D" />
+		<text id="5" type="text/plain" rect="(40.0, 260.75, 150.0, 27.0)" font-family="MS Shell Dlg 2" font-size="16">binary classification
+with classes 0 and 1</text>
+		<text id="6" type="text/plain" rect="(672.25, 2.75, 150.0, 92.0)" font-family="MS Shell Dlg 2" font-size="16">confusion matrix with some false positives and false negatives</text>
+		<text id="7" type="text/plain" rect="(95.5, 385.75, 377.5, 164.0)" font-family="MS Shell Dlg 2" font-size="16">construct a new feature with different threshold
+(change 0.5 to other values and observe results in Evaluation_Results_binary.py).
+
+With 0.655 instead of 0.5, no false positiv is left (at the expense of more false negatives and the overall performance). With 0.277 it is the other way round.</text>
+		<text id="8" type="text/markdown" rect="(29.0, 592.0, 592.0, 183.0)" font-family="MS Shell Dlg 2" font-size="16">The order for the definition of class 1 and class 0 in Edit Domain Widget and the order in Feature Constructor Widget affects the confusion matrix and the performance indices!
+The script is not fail safe! 
+
+__The script assumes, that first the positive class (1) is defined and than the negative class (0) is defined in Edit Domain Widget and Feature Constructor Widget!!!__
+</text>
+		<text id="9" type="text/plain" rect="(863.0, 438.0, 231.0, 90.0)" font-family="MS Shell Dlg 2" font-size="16">see Evaluation results and compare with the results from Test and Score Widget and Confusion Matrix Widget</text>
+	</annotations>
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'controlAreaVisible': True, 'header_state': b"\x00\x00\x00\xff\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04-\x00\x00\x00\x07\x01\x01\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\xff\xff\xff\xff\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x00'\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01\x03\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01s\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\xe8\x00\x00\x00\x00d", 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x9a\x00\x00\x00\xa9\x00\x00\x05\xe7\x00\x00\x03\xfe\x00\x00\x01\x9b\x00\x00\x00\xc8\x00\x00\x05\xe6\x00\x00\x03\xfd\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x01\x9b\x00\x00\x00\xc8\x00\x00\x05\xe6\x00\x00\x03\xfd', 'selected_id': 'core\\iris.tab', 'splitter_state': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x01,\x00\x00\x00\xc8\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', '__version__': 1}</properties>
+		<properties node_id="1" format="pickle">gASV0wIAAAAAAAB9lCiMFGNvbXBhcmlzb25fY3JpdGVyaW9ulEsAjBJjb250cm9sQXJlYVZpc2li
+bGWUiIwNY3Zfc3RyYXRpZmllZJSJjAduX2ZvbGRzlEsCjAluX3JlcGVhdHOUSwOMCnJlc2FtcGxp
+bmeUSwCMBHJvcGWURz+5mZmZmZmajAtzYW1wbGVfc2l6ZZRLCYwTc2F2ZWRXaWRnZXRHZW9tZXRy
+eZRDQgHZ0MsAAwAAAAAAxwAAAAwAAAPyAAACAgAAAMgAAAArAAAD8QAAAgEAAAAAAAAAAAeAAAAA
+yAAAACsAAAPxAAACAZSMEnNodWZmbGVfc3RyYXRpZmllZJSIjAh1c2Vfcm9wZZSJjAtzY29yZV90
+YWJsZZR9lIwMc2hvd25fc2NvcmVzlI+UKIwLU3BlY2lmaWNpdHmUjA5UcmFpbiB0aW1lIFtzXZSM
+DVRlc3QgdGltZSBbc12UjAZSZWNhbGyUjANNU0WUjAJDQZSMA0FVQ5SMAkYxlIwDTUFFlIwJUHJl
+Y2lzaW9ulIwEUk1TRZSMAlIylJBzjAtfX3ZlcnNpb25fX5RLA4wQY29udGV4dF9zZXR0aW5nc5Rd
+lIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwP
+Y2xhc3Nfc2VsZWN0aW9ulIwBMZRK/////4aUjAxmb2xkX2ZlYXR1cmWUTkr+////hpSMFWZvbGRf
+ZmVhdHVyZV9zZWxlY3RlZJSJSv7///+GlGgNfZRoHUsDdYwKYXR0cmlidXRlc5QojAxzZXBhbCBs
+ZW5ndGiUSwKGlIwLc2VwYWwgd2lkdGiUSwKGlIwMcGV0YWwgbGVuZ3RolEsChpSMC3BldGFsIHdp
+ZHRolEsChpR0lIwFbWV0YXOUKYwKY2xhc3NfdmFyc5SMBGlyaXOUSwGGlIWUdWJhdS4=
+</properties>
+		<properties node_id="2" format="literal">{'C_index': 61, 'auto_apply': True, 'class_weight': False, 'controlAreaVisible': True, 'learner_name': '', 'penalty_type': 1, 'savedWidgetGeometry': b"\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03V\x00\x00\x01\xab\x00\x00\x04(\x00\x00\x02\xc1\x00\x00\x03W\x00\x00\x01\xca\x00\x00\x04'\x00\x00\x02\xc0\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03W\x00\x00\x01\xca\x00\x00\x04'\x00\x00\x02\xc0", '__version__': 1}</properties>
+		<properties node_id="3" format="pickle">gASV+AkAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlImME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAoEAAAFz
+AAAFAAAAA1IAAAKBAAABcwAABQAAAANSAAAAAAAAAAAHgAAAAoEAAAFzAAAFAAAAA1KUjBJ1c2Vf
+aW5wdXRfZmVhdHVyZXOUiYwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVv
+cmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBFkb21h
+aW5fcm9sZV9oaW50c5R9lCiME0xvZ2lzdGljIFJlZ3Jlc3Npb26USwGGlIwJYXZhaWxhYmxllEsA
+hpSMF0xvZ2lzdGljIFJlZ3Jlc3Npb24gKDAplEsChpRoFUsBhpSMF0xvZ2lzdGljIFJlZ3Jlc3Np
+b24gKDEplEsChpRoFUsChpSMBEZvbGSUSwGGlGgVSwOGlIwMc2VwYWwgbGVuZ3RolEsChpSMCWF0
+dHJpYnV0ZZRLAIaUjAtzZXBhbCB3aWR0aJRLAoaUaCJLAYaUjAxwZXRhbCBsZW5ndGiUSwKGlGgi
+SwKGlIwLcGV0YWwgd2lkdGiUSwKGlGgiSwOGlIwEaXJpc5RLAYaUjAVjbGFzc5RLAIaUjA1OZXcg
+VmlyZ2luaWNhlEsBhpSMBG1ldGGUSwCGlHVK/v///4aUaAdLAXWMCmF0dHJpYnV0ZXOUfZQojAxz
+ZXBhbCBsZW5ndGiUSwKMC3NlcGFsIHdpZHRolEsCjAxwZXRhbCBsZW5ndGiUSwKMC3BldGFsIHdp
+ZHRolEsCjA1OZXcgVmlyZ2luaWNhlEsBjARpcmlzlEsBdYwFbWV0YXOUfZQojBNMb2dpc3RpYyBS
+ZWdyZXNzaW9ulEsBjBdMb2dpc3RpYyBSZWdyZXNzaW9uICgwKZRLAowXTG9naXN0aWMgUmVncmVz
+c2lvbiAoMSmUSwKMBEZvbGSUSwF1dWJoDCmBlH2UKGgPfZQojBFkb21haW5fcm9sZV9oaW50c5R9
+lChoOEsChpSMCWF2YWlsYWJsZZRLAIaUaDlLAoaUaEpLAYaUaDpLAoaUaEpLAoaUaDtLAoaUaEpL
+A4aUaD1LAYaUjAVjbGFzc5RLAIaUaEBLAYaUjARtZXRhlEsAhpRoQUsChpRoVksBhpRoQksChpRo
+VksChpRoQ0sBhpRoVksDhpR1Sv7///+GlGgHSwF1aDZ9lChoOEsCaDlLAmg6SwJoO0sCaD1LAXVo
+Pn2UKGhASwFoQUsCaEJLAmhDSwF1dWJoDCmBlH2UKGgPfZQoaEd9lChoOEsChpSMCWF0dHJpYnV0
+ZZRLAIaUaDlLAoaUaGZLAYaUaDpLAoaUaGZLAoaUaDtLAoaUaGZLA4aUaD1LAYaUaFNLAIaUaEBL
+AYaUaFZLAIaUjCNMb2dpc3RpYyBSZWdyZXNzaW9uIChub3QgdmlyZ2luaWNhKZRLAoaUaFZLAYaU
+jCNMb2dpc3RpYyBSZWdyZXNzaW9uIChub3QgVmlyZ2luaWNhKZRLAoaUaFZLAoaUjCRMb2dpc3Rp
+YyBSZWdyZXNzaW9uIChJcmlzLXZpcmdpbmljYSmUSwKGlGhWSwOGlGhDSwGGlGhWSwSGlHVK/v//
+/4aUaAdLAXVoNn2UKGg4SwJoOUsCaDpLAmg7SwJoPUsBdWg+fZQoaEBLAYwjTG9naXN0aWMgUmVn
+cmVzc2lvbiAobm90IHZpcmdpbmljYSmUSwKMI0xvZ2lzdGljIFJlZ3Jlc3Npb24gKG5vdCBWaXJn
+aW5pY2EplEsCjCRMb2dpc3RpYyBSZWdyZXNzaW9uIChJcmlzLXZpcmdpbmljYSmUSwJoQ0sBdXVi
+aAwpgZR9lChoD32UKGhHfZQoaDhLAoaUaEpLAIaUaDlLAoaUaEpLAYaUaDpLAoaUaEpLAoaUaDtL
+AoaUaEpLA4aUaEBLAYaUaEpLBIaUaHJLAoaUaEpLBYaUaHVLAoaUaEpLBoaUaHhLAoaUaEpLB4aU
+aENLAYaUaEpLCIaUjA1OZXdfVmlyZ2luaWNhlEsBhpRoZksAhpRoPUsBhpRoU0sAhpR1Sv7///+G
+lGgHSwF1aDZ9lChoOEsCaDlLAmg6SwJoO0sCaJlLAWg9SwF1aD59lChoQEsBaHJLAmh1SwJoeEsC
+aENLAXV1YmgMKYGUfZQoaA99lChoR32UKGg4SwKGlGhmSwCGlGg5SwKGlGhmSwGGlGg6SwKGlGhm
+SwKGlGg7SwKGlGhmSwOGlGg9SwGGlGhTSwCGlGhASwGGlGhWSwCGlIwhTG9naXN0aWMgUmVncmVz
+c2lvbiAoSXJpcy1zZXRvc2EplEsChpRoVksBhpSMJUxvZ2lzdGljIFJlZ3Jlc3Npb24gKElyaXMt
+dmVyc2ljb2xvcimUSwKGlGhWSwKGlIwkTG9naXN0aWMgUmVncmVzc2lvbiAoSXJpcy12aXJnaW5p
+Y2EplEsChpRoVksDhpRoQ0sBhpRoVksEhpR1Sv7///+GlGgHSwF1aDZ9lChoOEsCaDlLAmg6SwJo
+O0sCaD1LAXVoPn2UKGhASwFosUsCaLRLAmi3SwJoQ0sBdXViaAwpgZR9lChoD32UKIwRZG9tYWlu
+X3JvbGVfaGludHOUfZQojAJwMZRLAoaUjAlhdmFpbGFibGWUSwCGlIwCcDKUSwKGlGjGSwGGlIwC
+cDOUSwKGlGjGSwKGlIwERm9sZJRLAYaUaMZLA4aUjBdMb2dpc3RpYyBSZWdyZXNzaW9uICgxKZRL
+AYaUaMZLBIaUjBtMb2dpc3RpYyBSZWdyZXNzaW9uICgxKSAoMCmUSwKGlGjGSwWGlIwbTG9naXN0
+aWMgUmVncmVzc2lvbiAoMSkgKDEplEsChpRoxksGhpSMCm5ld19yZWplY3SUSwGGlIwJYXR0cmli
+dXRllEsAhpSMBnJlamVjdJRLAYaUjAVjbGFzc5RLAIaUdUr+////hpRoB0sBdWg2fZQoaMRLAmjI
+SwJoy0sCjApuZXdfcmVqZWN0lEsBaN5LAXVoPn2UKGjRSwFo1EsCaNdLAmjOSwF1dWJoDCmBlH2U
+KGgPfZQoaMJ9lChoxEsChpRoxksAhpRoyEsChpRoxksBhpRoy0sChpRoxksChpRozksBhpRoxksD
+hpRo0UsBhpRoxksEhpRo1EsChpRoxksFhpRo10sChpRo3EsAhpRo3ksBhpRo4EsAhpR1Sv7///+G
+lGgHSwF1aDZ9lChoxEsCaMhLAmjLSwJo3ksBdWg+fZQoaNFLAWjUSwJo10sCaM5LAXV1YmV1Lg==
+</properties>
+		<properties node_id="4" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\x81\x00\x00\x01s\x00\x00\x06X\x00\x00\x03\x9e\x00\x00\x02\x81\x00\x00\x01s\x00\x00\x06X\x00\x00\x03\x9e\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x02\x81\x00\x00\x01s\x00\x00\x06X\x00\x00\x03\x9e', 'select_rows': True, 'selected_cols': [], 'selected_rows': [], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+		<properties node_id="5" format="pickle">gASV7AUAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lENCAdnQywADAAAAAAAsAAACQAAAAqsAAAQfAAAALAAAAkAAAAKrAAAEHwAAAAAAAAAAB4AAAAAs
+AAACQAAAAqsAAAQflIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFu
+Z2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAxjdXJyZW50
+SW5kZXiUSwBK/v///4aUjAtkZXNjcmlwdG9yc5RdlIwoT3JhbmdlLndpZGdldHMuZGF0YS5vd2Zl
+YXR1cmVjb25zdHJ1Y3RvcpSMEkRpc2NyZXRlRGVzY3JpcHRvcpSTlCiMDU5ldyBWaXJnaW5pY2GU
+jD8wIGlmIExvZ2lzdGljX1JlZ3Jlc3Npb25fXzFfID4gICAgICAgICAgIDAuNSAgICAgICAgICAg
+ICBlbHNlIDGUjAExlIwBMJSGlIl0lIGUYYwXZXhwcmVzc2lvbnNfd2l0aF92YWx1ZXOUiUr+////
+hpRoBEsCdYwKYXR0cmlidXRlc5R9lCiMDHNlcGFsIGxlbmd0aJRLAowLc2VwYWwgd2lkdGiUSwKM
+DHBldGFsIGxlbmd0aJRLAowLcGV0YWwgd2lkdGiUSwKMBGlyaXOUSwF1jAVtZXRhc5R9lCiME0xv
+Z2lzdGljIFJlZ3Jlc3Npb26USwGMF0xvZ2lzdGljIFJlZ3Jlc3Npb24gKDAplEsCjBdMb2dpc3Rp
+YyBSZWdyZXNzaW9uICgxKZRLAowERm9sZJRLAXV1YmgJKYGUfZQoaAx9lCiMDGN1cnJlbnRJbmRl
+eJRK/////0r+////hpSMC2Rlc2NyaXB0b3JzlF2UjBdleHByZXNzaW9uc193aXRoX3ZhbHVlc5SJ
+Sv7///+GlGgESwJ1aB59lChoIEsCaCFLAmgiSwJoI0sCaCRLAXVoJX2UKGgnSwGMIUxvZ2lzdGlj
+IFJlZ3Jlc3Npb24gKElyaXMtc2V0b3NhKZRLAowlTG9naXN0aWMgUmVncmVzc2lvbiAoSXJpcy12
+ZXJzaWNvbG9yKZRLAowkTG9naXN0aWMgUmVncmVzc2lvbiAoSXJpcy12aXJnaW5pY2EplEsCaCpL
+AXV1YmgJKYGUfZQoaAx9lChoLksASv7///+GlGgwXZRoFCiMDU5ld19WaXJnaW5pY2GUjDUxIGlm
+IExvZ2lzdGljX1JlZ3Jlc3Npb25fX0lyaXNfdmlyZ2luaWNhXyA+MC41IGVsc2UgMJRoGGgXhpSJ
+dJSBlGFoMolK/v///4aUaARLAnVoHn2UKGggSwJoIUsCaCJLAmgjSwJoJEsBdWglfZQoaCdLAYwj
+TG9naXN0aWMgUmVncmVzc2lvbiAobm90IHZpcmdpbmljYSmUSwKMI0xvZ2lzdGljIFJlZ3Jlc3Np
+b24gKG5vdCBWaXJnaW5pY2EplEsCjCRMb2dpc3RpYyBSZWdyZXNzaW9uIChJcmlzLXZpcmdpbmlj
+YSmUSwJoKksBdXViaAkpgZR9lChoDH2UKIwMY3VycmVudEluZGV4lEsASv7///+GlIwLZGVzY3Jp
+cHRvcnOUXZRoFCiMCm5ld19yZWplY3SUjC0xIGlmIExvZ2lzdGljX1JlZ3Jlc3Npb25fXzFfX18x
+XyA+IDAuMyBlbHNlIDCUaBhoF4aUiXSUgZRhjBdleHByZXNzaW9uc193aXRoX3ZhbHVlc5SJSv7/
+//+GlGgESwJ1aB59lCiMAnAxlEsCjAJwMpRLAowCcDOUSwKMBnJlamVjdJRLAXVoJX2UKIwXTG9n
+aXN0aWMgUmVncmVzc2lvbiAoMSmUSwGMG0xvZ2lzdGljIFJlZ3Jlc3Npb24gKDEpICgwKZRLAowb
+TG9naXN0aWMgUmVncmVzc2lvbiAoMSkgKDEplEsCjARGb2xklEsBdXViZXUu
+</properties>
+		<properties node_id="6" format="pickle">gASVbQIAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lENCAdnQywADAAAAAACRAAABEgAAAxIAAAMRAAAAkgAAATEAAAMRAAADEAAAAAAAAAAAB4AAAACS
+AAABMQAAAxEAAAMQlIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9yYW5n
+ZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMFF9kb21haW5f
+Y2hhbmdlX3N0b3JllH2UjAtDYXRlZ29yaWNhbJQojARpcmlzlIwLSXJpcy1zZXRvc2GUjA9Jcmlz
+LXZlcnNpY29sb3KUjA5JcmlzLXZpcmdpbmljYZSHlCmJdJSGlF2UjBFDYXRlZ29yaWVzTWFwcGlu
+Z5RdlCiMDklyaXMtdmlyZ2luaWNhlIwBMZSGlIwLSXJpcy1zZXRvc2GUjAEwlIaUjA9JcmlzLXZl
+cnNpY29sb3KUaB+GlGWFlIaUYXNK/v///4aUjBZfbWVyZ2VfZGlhbG9nX3NldHRpbmdzlH2USvz/
+//+GlIwOX3NlbGVjdGVkX2l0ZW2UjARpcmlzlEsAhpRK/v///4aUjBFvdXRwdXRfdGFibGVfbmFt
+ZZSMAJRK/v///4aUaARLAnWMCmF0dHJpYnV0ZXOUfZQojAxzZXBhbCBsZW5ndGiUSwKMC3NlcGFs
+IHdpZHRolEsCjAxwZXRhbCBsZW5ndGiUSwKMC3BldGFsIHdpZHRolEsCaBFLAXWMBW1ldGFzlH2U
+dWJhdS4=
+</properties>
+		<properties node_id="7" format="pickle">gASVkAEAAAAAAAB9lCiMEmFwcGVuZF9wcmVkaWN0aW9uc5SIjBRhcHBlbmRfcHJvYmFiaWxpdGll
+c5SJjAphdXRvY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21l
+dHJ5lENCAdnQywADAAAAAATRAAAARgAAB1IAAAGJAAAE0gAAAGUAAAdRAAABiAAAAAAAAAAAB4AA
+AATSAAAAZQAAB1EAAAGIlIwQc2VsZWN0ZWRfbGVhcm5lcpRdlEsAYYwRc2VsZWN0ZWRfcXVhbnRp
+dHmUSwCMC19fdmVyc2lvbl9flEsBjBBjb250ZXh0X3NldHRpbmdzlF2UKIwVb3Jhbmdld2lkZ2V0
+LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwJc2VsZWN0aW9ulI+UaApL
+AXWMB2NsYXNzZXOUjAExlIwBMJSGlHViaA8pgZR9lChoEn2UKIwJc2VsZWN0aW9ulI+UaApLAXVo
+FmgYaBeGlHViZXUu
+</properties>
+		<properties node_id="8" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x032\x00\x00\x00S\x00\x00\x06\xb5\x00\x00\x03\x92\x00\x00\x033\x00\x00\x00r\x00\x00\x06\xb4\x00\x00\x03\x91\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x033\x00\x00\x00r\x00\x00\x06\xb4\x00\x00\x03\x91', 'scriptLibrary': [{'name': 'Evaluation_Results_binary.py\n', 'script': '# Evaluation Results \n# (only for binary classification; \n# useful with manually adjusted threshold)\n########################################################\n# no Settings\n########################################################\n# File: Evaluation_Results_binary.py\n\n"""\n* Widget input: data\n    - predicted values as metas (and only this column in metas!)\n    - target\n    (use Select Columns Widget to shape the data accordingly)\n\n    Classes in target and predicted must be 1 for positiv and 0 for negative class!\n    Data may or may not contain features.\n\n* Widget output: \n    - no output, results are printed in this Widget.\n\n* Computes Confusion matrix and some more Evaluation results\n  out of data with predicted values and target.\n* Mainly, if predicted values are generated with Feature\n  Constructor Widget with a special Threshold.\n* Only for binary classification.\n\n"""\n\nimport Orange\nimport numpy as np\nfrom sklearn.metrics import confusion_matrix\nfrom math import sqrt\n\ny_true = in_data.Y\ny_pred = in_data.metas\n\nmatrix = confusion_matrix(y_true, y_pred)\nCA = np.sum(np.diagonal(matrix))/np.sum(matrix)\nprecision = matrix[0,0]/np.sum(matrix[:,0])\nrecall = matrix[0,0]/np.sum(matrix[0,:])\nspecificity = matrix[1,1]/np.sum(matrix[1,:])\nF1_score = 2/((1/precision)+(1/recall))\n\n# calculate Matthews correlation coefficient\ntp = matrix[0,0]\ntn = matrix[1,1]\nfp = matrix[1,0]\nfn = matrix[0,1]\nMCC = (tp*tn-fp*fn)/sqrt((tp+fp)*(tp+fn)*(tn+fp)*(tn+fn))\n# There is also a sklearn-function for calculation of MCC out of y_true and y_pred.\n# But because confusion matrix is already calculated, this should be faster, I think.\n\nprint("")\nprint("-------------------------------")\nprint("Confusion matrix:")\nprint("-------------------------------")\nprint("                    predicted")\nprint("                   1          0")\nprint(f"actual  1   {matrix[0,0]:8}   {matrix[0,1]:8}")\nprint(f"        0   {matrix[1,0]:8}   {matrix[1,1]:8}")\n\nprint()\nprint(f"CA:            {CA:1.3}")\nprint(f"Precision:     {precision:1.3}")\nprint(f"Recall:        {recall:1.3}")\nprint(f"Specificity:   {specificity:1.3}")\nprint(f"F1_score:      {F1_score:1.3}")\nprint(f"MCC:           {MCC:1.3}")\n', 'filename': 'C:/Users/00613/Sync-Austausch/_ML/_Orange/Orange-Python-Scripts/Diagram_target_predictions2D.py'}], 'scriptText': '# Evaluation Results \n# (only for binary classification; \n# useful with manually adjusted threshold)\n########################################################\n# no Settings\n########################################################\n# File: Evaluation_Results_binary.py\n\n"""\n* Widget input: data\n    - predicted values as metas (and only this column in metas!)\n    - target\n    (use Select Columns Widget to shape the data accordingly)\n\n    Classes in target and predicted must be 1 for positiv and 0 for negative class!\n    Data may or may not contain features.\n\n* Widget output: \n    - no output, results are printed in this Widget.\n\n* Computes Confusion matrix and some more Evaluation results\n  out of data with predicted values and target.\n* Mainly, if predicted values are generated with Feature\n  Constructor Widget with a special Threshold.\n* Only for binary classification.\n\n"""\n\nimport Orange\nimport numpy as np\nfrom sklearn.metrics import confusion_matrix\nfrom math import sqrt\n\ny_true = in_data.Y\ny_pred = in_data.metas\n\nmatrix = confusion_matrix(y_true, y_pred)\nCA = np.sum(np.diagonal(matrix))/np.sum(matrix)\nprecision = matrix[0,0]/np.sum(matrix[:,0])\nrecall = matrix[0,0]/np.sum(matrix[0,:])\nspecificity = matrix[1,1]/np.sum(matrix[1,:])\nF1_score = 2/((1/precision)+(1/recall))\n\n# calculate Matthews correlation coefficient\ntp = matrix[0,0]\ntn = matrix[1,1]\nfp = matrix[1,0]\nfn = matrix[0,1]\nMCC = (tp*tn-fp*fn)/sqrt((tp+fp)*(tp+fn)*(tn+fp)*(tn+fn))\n# There is also a sklearn-function for calculation of MCC out of y_true and y_pred.\n# But because confusion matrix is already calculated, this should be faster, I think.\n\nprint("")\nprint("-------------------------------")\nprint("Confusion matrix:")\nprint("-------------------------------")\nprint("                    predicted")\nprint("                   1          0")\nprint(f"actual  1   {matrix[0,0]:8}   {matrix[0,1]:8}")\nprint(f"        0   {matrix[1,0]:8}   {matrix[1,1]:8}")\n\nprint()\nprint(f"CA:            {CA:1.3}")\nprint(f"Precision:     {precision:1.3}")\nprint(f"Recall:        {recall:1.3}")\nprint(f"Specificity:   {specificity:1.3}")\nprint(f"F1_score:      {F1_score:1.3}")\nprint(f"MCC:           {MCC:1.3}")\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x01\x8e\x00\x00\x01j\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
