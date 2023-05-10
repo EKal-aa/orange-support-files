@@ -41,7 +41,17 @@ Usage:
 
 ```
 
-The script has no setting.
+Settings:
+```
+#################################
+# Settings:
+Target_Class = "Scrap"
+# Target Class or positive Class for calculation 
+# of Evaluation Results other than Confusion matrix
+# and CA
+
+#####################################################
+```
 
 ## Usage in the canvas
 
@@ -74,5 +84,5 @@ We can get suitable values for the decision threshold out of the ROC Analysis Wi
 ![](images/evaluation-results-binary_06.png)
 
 ## Example flow 
-Example 7 - Changing Decision Threshold.ows
+Example 8 - Evaluation results and Changing Decision Threshold.ows
 
