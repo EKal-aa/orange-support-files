@@ -67,16 +67,15 @@ It is necessary to have the same sequence of classes in the target and in the me
 
 ![](images/evaluation-results_03.png)
 
-With this preparation, Evaluation_Results.py computes a new confusion matrix and performance criteria. If we use 0.18 for the decision threshold in Feature Constructor Widget, than we get zero false negatives (so no Scrap part is identified as OK), but more false positives instead. 
+With this preparation, Evaluation_Results.py computes a new confusion matrix and performance criteria. If we use 0.18 for the decision threshold in Feature Constructor Widget, we get zero false negatives (so no Scrap part is identified as OK), but more false positives instead. 
 
 ![](images/evaluation-results_04.png)
 
-If we lower the decision threshold to 0.277, we get no false negatives, but more false positives.
-
-We can get suitable values for the decision threshold out of the ROC Analysis Widget. When we position the mouse pointer over the corners of the ROC, the corresponding threshold is shown.
+For the first use of Evaluation_results.py for a new dataset, the value of Target_Class does not fit to the data. In this Case, the possible values for Target-Class are displayed, and the user should type in the desired Target Class.
 
 ![](images/evaluation-results_05.png)
 
+We can get suitable values for the decision threshold out of the ROC Analysis Widget. When we position the mouse pointer over the corners of the ROC, the corresponding threshold is shown.
 
 ![](images/evaluation-results_06.png)
 
