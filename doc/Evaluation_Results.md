@@ -13,7 +13,7 @@ When a learner is used to make binary classification, and when a custom decision
 feature construction widget, this script can be used to display the performance.
 A custom decision theshold is sometimes desireable, when one type of wrong classification (either false positives or false negatives) 
 is prefered over the other. 
-For a multiclass classification it is also possible to construct a adjusted model output with Feature Constructor Widget and to compute
+For a multiclass classification it is also possible to construct an adjusted model output with Feature Constructor Widget and to compute
 the resulting confusion matrix and CA and (with a specific positive class or target class) to compute the other performance criteria.
 
 doc-string:
