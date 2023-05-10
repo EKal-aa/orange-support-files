@@ -27,4 +27,4 @@ All are written for the direct use in my lectures. Some are inspired or adapted 
 - See also documentation ([Some documentation for the scripts](https://github.com/EKal-aa/orange-support-files/blob/main/doc/readme.md)).
 - Some example flows are provided in the folder "example-flows".
 
-![](doc/images/script_repo_01.png)
+![](doc/images/script_repo_02.png)
