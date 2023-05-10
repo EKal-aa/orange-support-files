@@ -61,29 +61,21 @@ In this example, the iris-dataset is used. But we use this dataset to simulate p
 
 The standard model have some false positives and some false negatives, so not all Scrap parts are identified by the standard model. We use Feature Constructor to create a new feature "class" and use the models output for the probability to have a Scrap part. So we can tweak the standard models output. This new feature is than placed as the first meta with Select Columns.
 
-It is necessary to have the same sequence of classes in the target and in the metas.
+It is necessary to have the same sequence of classes in the target and in the metas (here 1. Scrap, 2. OK part).
 
 ![](images/evaluation-results_02.png)
 
 ![](images/evaluation-results_03.png)
 
-If for our application it is necessary, to avoid false positives (also if this means, that we get more classification errors overall), we can use the trained classifier, use the calculated probabilities for the positiv class (which are stored in the metas as "Logistic Regression (1)" after Test and Score) and compute a new output with a different decision threshold. 
+With this preparation, Evaluation_Results.py computes a new confusion matrix and performance criteria. If we use 0.18 for the decision threshold in Feature Constructor Widget, than we get zero false negatives (so no Scrap part is identified as OK), but more false positives instead. 
 
-As standard, if the probability for the positiv class is higher than 0.5, the positiv class is predicted. In Feature constructor, we create a new feature "New Virginica" with a custom decision threshold. With Select Columns, the newly created feature becomes a meta. And the other former metas are ignored.
-
-
-![](images/evaluation-results-binary_04.png)
-
-With this preparation, Evaluation_Results_binary.py computes a new confusion matrix and performance criteria. If we use 0.655 for the decision threshold in Feature Constructor Widget, than we get zero false positives, but more false negatives instead. The total number of missclassifications are higher than the standard from above. But if it's very important to get no false positives in our predictions, we can construct our custom output and we can use Evaluation_Results_binary.py to show the performance criteria.
-
-
-![](images/evaluation-results-binary_05.png)
+![](images/evaluation-results_04.png)
 
 If we lower the decision threshold to 0.277, we get no false negatives, but more false positives.
 
 We can get suitable values for the decision threshold out of the ROC Analysis Widget. When we position the mouse pointer over the corners of the ROC, the corresponding threshold is shown.
 
-![](images/evaluation-results-binary_06.png)
+![](images/evaluation-results-binary_05.png)
 
 ## Example flow 
 Example 8 - Evaluation results and Changing Decision Threshold.ows
