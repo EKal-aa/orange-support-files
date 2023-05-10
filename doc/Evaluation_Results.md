@@ -57,7 +57,7 @@ Target_Class = "Scrap"
 
 ![](images/evaluation-results_01.png)
 
-In this example, the iris-dataset is used. But we use this dataset to simulate problem in Quality Assurance (the detection of Scrap parts). It is important to find all actual Scrap parts, even if some OK parts are classified als Scrap. In this example, we have a binary classification. But also multiclass classifiaction is possible to handle with Evaluation_results.py.
+In this example, the iris-dataset is used. But we use this dataset to simulate a problem in Quality Assurance (the detection of Scrap parts). It is important to find all actual Scrap parts, even if some OK parts are classified as Scrap. In this example, we have a binary classification. But also multiclass classifiaction is possible to handle with Evaluation_results.py (see Example flow).
 
 The standard model have some false positives and some false negatives, so not all Scrap parts are identified by the standard model. We use Feature Constructor to create a new feature "class" and use the models output for the probability to have a Scrap part. So we can tweak the standard models output. This new feature is than placed as the first meta with Select Columns.
 
