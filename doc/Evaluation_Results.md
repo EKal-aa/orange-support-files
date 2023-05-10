@@ -55,9 +55,11 @@ Target_Class = "Scrap"
 
 ## Usage in the canvas
 
-![](images/evaluation-results-binary_01.png)
+![](images/evaluation-results_01.png)
 
-In this example, the iris-dataset is used. To do a binary classification, we want to distinguish between iris-virginica (positive class, 1 in Edit Domain Widget) and the other flowers (negative class, 0 in Edit Domain Widget). We can use Test and Score Widget and Confusion Matrix Widget to show the results of the classification. We get 3 false positives, 3 flowers, which are classified as iris-virginica, but are actually another iris. 
+In this example, the iris-dataset is used. But we use this dataset to simulate problem in Quality Assurance (the detection of Scrap parts). It is important to find all actual Scrap parts, even if some OK parts are classified als Scrap. In this example, we have a binary classification. But also multiclass classifiaction is possible to handle with Evaluation_results.py.
+
+The standard model have some false positives and some false negatives, so not all Scrap parts are identified by the standard model. We use Feature Constructor to create a new feature "class" and use the models output for the probability to have a Scrap part. So we can tweak the standard models output.
 
 ![](images/evaluation-results-binary_02.png)
 
