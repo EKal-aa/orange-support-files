@@ -77,6 +77,9 @@ We can get suitable values for the decision threshold out of the ROC Analysis Wi
 
 ![](images/evaluation-results_05.png)
 
+
+![](images/evaluation-results_06.png)
+
 ## Example flow 
 Example 8 - Evaluation results and Changing Decision Threshold.ows
 
