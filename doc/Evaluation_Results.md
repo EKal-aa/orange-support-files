@@ -59,13 +59,13 @@ Target_Class = "Scrap"
 
 In this example, the iris-dataset is used. But we use this dataset to simulate problem in Quality Assurance (the detection of Scrap parts). It is important to find all actual Scrap parts, even if some OK parts are classified als Scrap. In this example, we have a binary classification. But also multiclass classifiaction is possible to handle with Evaluation_results.py.
 
-The standard model have some false positives and some false negatives, so not all Scrap parts are identified by the standard model. We use Feature Constructor to create a new feature "class" and use the models output for the probability to have a Scrap part. So we can tweak the standard models output.
+The standard model have some false positives and some false negatives, so not all Scrap parts are identified by the standard model. We use Feature Constructor to create a new feature "class" and use the models output for the probability to have a Scrap part. So we can tweak the standard models output. This new feature is than placed as the first meta with Select Columns.
 
-![](images/evaluation-results-binary_02.png)
+It is necessary to have the same sequence of classes in the target and in the metas.
 
-Of course the Evaluation_Results_binary.py come to the same results.
+![](images/evaluation-results_02.png)
 
-![](images/evaluation-results-binary_03.png)
+![](images/evaluation-results_03.png)
 
 If for our application it is necessary, to avoid false positives (also if this means, that we get more classification errors overall), we can use the trained classifier, use the calculated probabilities for the positiv class (which are stored in the metas as "Logistic Regression (1)" after Test and Score) and compute a new output with a different decision threshold. 
 
