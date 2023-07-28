@@ -1,5 +1,5 @@
 # Validation_curve.py
-Plots a validation curve with training- and cross validation score to compare different learner settings.
+Plots a validation curve with cross validation score (and optional with test on train data score) to compare different learner settings.
 Also the standard errors of the scores are shown. (see also [validation curve in sklearn](https://scikit-learn.org/stable/modules/learning_curve.html#validation-curve))
 Uses the Predictions output of Widget Test and Score.
 
@@ -8,7 +8,7 @@ doc-string:
 ```
 * Widget input: Predictions from Test & Score with Cross validation
   and optional: Predictions from Test & Score with test on training data
-* Widget output: Text in the console window of Widget
+* Widget output: Diagram and text in the console window of Widget
 
 * Computes and shows validation curve for learners out of cross validation by Widget Test & Score
 * Uses standard error to indicate variability of the results.
