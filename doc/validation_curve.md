@@ -38,9 +38,9 @@ file_path = "E:/Downloads/" # file path for save_results
 ## Usage in the canvas
 It is possible to realise a variation of hyperparameters (as shown here; max. tree depth is varied) to produce a validation curve. It is also possible to just compare some different learners, e.g. linear regression, kNN and AdaBoost,  in the diagram. 
 
-Use one Test & Score Widget with Cross validation and connect it to the Data input of Validation curve Widget. 
+Use one Test & Score Widget __with Cross validation__ and connect it to the Data input of Validation curve Widget. 
 
-(Optional) Use another Test & Score Widget with Test on Traindata and connect it to the Object input of Validation curve Widget. 
+(Optional) Use another Test & Score Widget __with Test on Traindata__ and connect it to the Object input of Validation curve Widget. 
 
 In the diagram, the names of the learners as defined in the learner widget are used.
 
