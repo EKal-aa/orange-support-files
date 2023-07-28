@@ -71,13 +71,8 @@ For classification problems, classification accuracy (CA) is used as performance
 
 ## save results = True
 
-With __save_results = True__ and defining the path __file_path = "E:/Downloads/"__ it is possible to save an excel file with the numerical results. Use (forward) slash in the path and a slash at the end of the path also in Windows (no backslash).
+With __save_results = True__ and defining the path __file_path = "E:/Downloads/"__ it is possible to save an excel file with the numerical results. Use __(forward) slash__ in the path and a slash at the end of the path also in Windows (no backslash).
 
-## replicable = True
-
-With __replicable = False__ the data is shuffled in the script. 
-
-With __replicable = True__ the data is not shuffled, so that several runs of the script give the same results. Make sure that the data is shuffled, before it is used in the script!
 
 ## Example flow
 Example 4a - Validation Curve.ows (with a classification problem)
