@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="Datasets" qualified_name="Orange.widgets.data.owdatasets.OWDataSets" project_name="Orange3" version="" title="Datasets (Wine)" position="(144.0, 159.0)" />
+		<node id="1" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="Test and Score CV" position="(449.0, 166.0)" />
+		<node id="2" name="Tree" qualified_name="Orange.widgets.model.owtree.OWTreeLearner" project_name="Orange3" version="" title="Tree, max. depth=1" position="(211.0, 284.0)" />
+		<node id="3" name="Tree" qualified_name="Orange.widgets.model.owtree.OWTreeLearner" project_name="Orange3" version="" title="Tree, max. depth=2" position="(211.0, 404.0)" />
+		<node id="4" name="Tree" qualified_name="Orange.widgets.model.owtree.OWTreeLearner" project_name="Orange3" version="" title="Tree, max. depth=3" position="(211.0, 524.0)" />
+		<node id="5" name="Tree" qualified_name="Orange.widgets.model.owtree.OWTreeLearner" project_name="Orange3" version="" title="Tree, max. depth=4" position="(211.0, 644.0)" />
+		<node id="6" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="Test and Score Traindata" position="(449.0, 286.0)" />
+		<node id="7" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Validation_curve.py" position="(675.0, 174.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="1" source_node_id="2" sink_node_id="1" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="2" source_node_id="3" sink_node_id="1" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="3" source_node_id="4" sink_node_id="1" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="4" source_node_id="5" sink_node_id="1" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="5" source_node_id="0" sink_node_id="6" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="6" source_node_id="2" sink_node_id="6" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="7" source_node_id="3" sink_node_id="6" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="8" source_node_id="4" sink_node_id="6" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="9" source_node_id="5" sink_node_id="6" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="10" source_node_id="1" sink_node_id="7" source_channel="Predictions" sink_channel="Data" enabled="true" />
+		<link id="11" source_node_id="6" sink_node_id="7" source_channel="Predictions" sink_channel="Object" enabled="true" />
+	</links>
+	<annotations>
+		<text id="0" type="text/markdown" rect="(94.0, 24.0, 507.0, 82.0)" font-family="MS Shell Dlg 2" font-size="16"># Example for Validation curve
+(Classification)</text>
+		<text id="1" type="text/plain" rect="(127.0, 784.0, 150.0, 27.0)" font-family="MS Shell Dlg 2" font-size="16">some learners,
+note use of Widget names</text>
+		<text id="2" type="text/plain" rect="(558.0, 343.0, 150.0, 31.0)" font-family="MS Shell Dlg 2" font-size="16">Cross validation</text>
+		<text id="3" type="text/plain" rect="(539.0, 423.0, 150.0, 31.0)" font-family="MS Shell Dlg 2" font-size="16">Test on Traindata</text>
+		<arrow id="4" start="(554.0, 344.0)" end="(493.0, 224.0)" fill="#C1272D" />
+		<arrow id="5" start="(542.0, 417.0)" end="(484.0, 351.0)" fill="#C1272D" />
+		<arrow id="6" start="(159.0, 767.0)" end="(175.0, 708.0)" fill="#C1272D" />
+		<text id="7" type="text/plain" rect="(596.0, 277.0, 150.0, 50.0)" font-family="MS Shell Dlg 2" font-size="16">see Validation curve and settings</text>
+		<arrow id="8" start="(598.0, 280.0)" end="(667.0, 225.0)" fill="#C1272D" />
+	</annotations>
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'controlAreaVisible': True, 'header_state': b"\x00\x00\x00\xff\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x05\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04-\x00\x00\x00\x07\x01\x01\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\xff\xff\xff\xff\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x00'\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01\x03\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01s\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\xe8\x00\x00\x00\x00d", 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x9b\x00\x00\x00\xc8\x00\x00\x05\xe6\x00\x00\x03\xfd\x00\x00\x01\x9b\x00\x00\x00\xc8\x00\x00\x05\xe6\x00\x00\x03\xfd\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x01\x9b\x00\x00\x00\xc8\x00\x00\x05\xe6\x00\x00\x03\xfd', 'selected_id': 'core\\wine.tab', 'splitter_state': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x01,\x00\x00\x00\xc8\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', '__version__': 1}</properties>
+		<properties node_id="1" format="pickle">gASVWRIAAAAAAAB9lCiMFGNvbXBhcmlzb25fY3JpdGVyaW9ulEsAjBJjb250cm9sQXJlYVZpc2li
+bGWUiIwNY3Zfc3RyYXRpZmllZJSJjAduX2ZvbGRzlEsCjAluX3JlcGVhdHOUSwOMCnJlc2FtcGxp
+bmeUSwCMBHJvcGWURz+5mZmZmZmajAtzYW1wbGVfc2l6ZZRLAowTc2F2ZWRXaWRnZXRHZW9tZXRy
+eZRDQgHZ0MsAAwAAAAAAEgAAAEAAAALTAAACrAAAABIAAABAAAAC0wAAAqwAAAAAAAAAAAeAAAAA
+EgAAAEAAAALTAAACrJSMEnNodWZmbGVfc3RyYXRpZmllZJSJjAh1c2Vfcm9wZZSJjAtzY29yZV90
+YWJsZZR9lIwMc2hvd25fc2NvcmVzlI+UKIwCRjGUjAlQcmVjaXNpb26UjAZSZWNhbGyUjARSTVNF
+lIwDTVNFlIwCQ0GUjAJSMpSMA01BRZSMA0FVQ5SQc4wLX192ZXJzaW9uX1+USwOMEGNvbnRleHRf
+c2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2
+YWx1ZXOUfZQojA9jbGFzc19zZWxlY3Rpb26UjBYoQXZlcmFnZSBvdmVyIGNsYXNzZXMplEr/////
+hpSMDGZvbGRfZmVhdHVyZZROSv7///+GlIwVZm9sZF9mZWF0dXJlX3NlbGVjdGVklIlK/v///4aU
+aA19lGgaSwN1jAphdHRyaWJ1dGVzlCiMB0FsY29ob2yUSwKGlIwKTWFsaWMgQWNpZJRLAoaUjANB
+c2iUSwKGlIwRQWxjYWxpbml0eSBvZiBhc2iUSwKGlIwJTWFnbmVzaXVtlEsChpSMDVRvdGFsIHBo
+ZW5vbHOUSwKGlIwKRmxhdmFub2lkc5RLAoaUjBROb25mbGF2YW5vaWQgcGhlbm9sc5RLAoaUjA9Q
+cm9hbnRob2N5YW5pbnOUSwKGlIwPQ29sb3IgaW50ZW5zaXR5lEsChpSMA0h1ZZRLAoaUjBxPRDI4
+MC9PRDMxNSBvZiBkaWx1dGVkIHdpbmVzlEsChpSMB1Byb2xpbmWUSwKGlHSUjAVtZXRhc5QpjApj
+bGFzc192YXJzlIwEV2luZZRLAYaUhZR1YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgnTkr+////
+hpRoKYlK/v///4aUaA19lGgaSwN1aCwojA1maXhlZCBhY2lkaXR5lEsChpSMEHZvbGF0aWxlIGFj
+aWRpdHmUSwKGlIwLY2l0cmljIGFjaWSUSwKGlIwOcmVzaWR1YWwgc3VnYXKUSwKGlIwJY2hsb3Jp
+ZGVzlEsChpSME2ZyZWUgc3VsZnVyIGRpb3hpZGWUSwKGlIwUdG90YWwgc3VsZnVyIGRpb3hpZGWU
+SwKGlIwHZGVuc2l0eZRLAoaUjAJwSJRLAoaUjAlzdWxwaGF0ZXOUSwKGlIwHYWxjb2hvbJRLAoaU
+dJRoSCloSYwHcXVhbGl0eZRLAoaUhZR1YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgnTkr+////
+hpRoKYlK/v///4aUaA19lGgaSwN1aCyMB091dGxvb2uUSwGGlIwHQ29tcGFueZRLAYaUjAhTYWls
+Ym9hdJRLAYaUh5RoSCloSYwEU2FpbJRLAYaUhZR1YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgn
+Tkr+////hpRoKYlK/v///4aUaA19lGgaSwN1aCwojAFhlEsBhpSMAWKUSwGGlIwBY5RLAYaUjAFk
+lEsBhpSMAWWUSwGGlIwBZpRLAYaUdJRoSCloSYwBeZRLAYaUhZR1YmgfKYGUfZQoaCJ9lChoJGgl
+Sv////+GlGgnjAVNb250aJRLZYaUaCmJSv7///+GlGgNfZRoGksDdWgsKIwEVHlwZZRLAYaUjAZI
+YXMgRkKUSwGGlIwPQmFja2VkIFByb2plY3RzlEsChpSMEVByZXZpb3VzIFByb2plY3RzlEsChpSM
+EENyZWF0b3IgRGVzYyBMZW6USwKGlIwJVGl0bGUgTGVulEsChpSMBEdvYWyUSwKGlIwIRHVyYXRp
+b26USwKGlIwNUGxlZGdlIExldmVsc5RLAoaUjBBNaW4gUGxlZGdlIFRpZXJzlEsChpSMEE1heCBQ
+bGVkZ2UgVGllcnOUSwKGlIwNUHJvaiBEZXNjIExlbpRLAoaUjAZJbWFnZXOUSwKGlIwGVmlkZW9z
+lEsChpSMCUhhcyBWaWRlb5RLAoaUdJRoSCiMA1VSTJRLA4aUjAVUaXRsZZRLA4aUjARZZWFylEsD
+hpRomksBhpR0lGhJjAZGdW5kZWSUSwGGlIWUdWJoHymBlH2UKGgifZQoaCRoJUr/////hpRoJ05K
+/v///4aUaCmJSv7///+GlGgNfZRoGksDdWgsjAZzdGF0dXOUSwGGlIwDYWdllEsBhpSMA3NleJRL
+AYaUh5RoSCloSYwIc3Vydml2ZWSUSwGGlIWUdWJoHymBlH2UKGgifZQoaCRoJUr/////hpRoJ05K
+/v///4aUaCmJSv7///+GlGgNfZRoGksDdWgsKIwMc2VwYWwgbGVuZ3RolEsChpSMC3NlcGFsIHdp
+ZHRolEsChpSMDHBldGFsIGxlbmd0aJRLAoaUjAtwZXRhbCB3aWR0aJRLAoaUdJRoSCloSYwEaXJp
+c5RLAYaUhZR1YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgnTkr+////hpRoKYlK/v///4aUaA19
+lGgaSwN1aCwojBNoYW5kaWNhcHBlZC1pbmZhbnRzlEsBhpSMGndhdGVyLXByb2plY3QtY29zdC1z
+aGFyaW5nlEsBhpSMIWFkb3B0aW9uLW9mLXRoZS1idWRnZXQtcmVzb2x1dGlvbpRLAYaUjBRwaHlz
+aWNpYW4tZmVlLWZyZWV6ZZRLAYaUjA9lbC1zYWx2YWRvci1haWSUSwGGlIwbcmVsaWdpb3VzLWdy
+b3Vwcy1pbi1zY2hvb2xzlEsBhpSMF2FudGktc2F0ZWxsaXRlLXRlc3QtYmFulEsBhpSMGWFpZC10
+by1uaWNhcmFndWFuLWNvbnRyYXOUSwGGlIwKbXgtbWlzc2lsZZRLAYaUjAtpbW1pZ3JhdGlvbpRL
+AYaUjBxzeW5mdWVscy1jb3Jwb3JhdGlvbi1jdXRiYWNrlEsBhpSMEmVkdWNhdGlvbi1zcGVuZGlu
+Z5RLAYaUjBZzdXBlcmZ1bmQtcmlnaHQtdG8tc3VllEsBhpSMBWNyaW1llEsBhpSMEWR1dHktZnJl
+ZS1leHBvcnRzlEsBhpSMJmV4cG9ydC1hZG1pbmlzdHJhdGlvbi1hY3Qtc291dGgtYWZyaWNhlEsB
+hpR0lGhIKWhJjAVwYXJ0eZRLAYaUhZR1YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgnTkr+////
+hpRoKYlK/v///4aUaA19lGgaSwN1aCwojA9DbHVtcCB0aGlja25lc3OUSwKGlIwOVW5pZl9DZWxs
+X1NpemWUSwKGlIwPVW5pZl9DZWxsX1NoYXBllEsChpSMEU1hcmdpbmFsX0FkaGVzaW9ulEsChpSM
+EFNpbmdsZV9DZWxsX1NpemWUSwKGlIwLQmFyZV9OdWNsZWmUSwKGlIwQQmxhbmRfQ2hyb21hdGlu
+ZZRLAoaUjA9Ob3JtYWxfTnVjbGVvbGmUSwKGlIwHTWl0b3Nlc5RLAoaUdJRoSCloSYwEdHlwZZRL
+AYaUhZR1YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgnTkr+////hpRoKYlK/v///4aUaA19lGga
+SwN1aCwojAZGYWJyaWOUSwGGlIwMUmltIGRpYW1ldGVylEsBhpSMCFJpbSB0eXBllEsBhpSMDVNo
+b3VsZGVyIHR5cGWUSwGGlIwSSGFuZGxlcyBpbiBwcm9maWxllEsBhpSMEkhhbmRsZXMgaW4gc2Vj
+dGlvbpRLAYaUjAlOZWNrIHR5cGWUSwGGlIwJQm9keSB0eXBllEsBhpSMCUJhc2UgdHlwZZRLAYaU
+jBBDYXBhY2l0eSAoYXZnIGwplEsBhpR0lGhIKIwDVVJMlEsDhpSMBE5hbWWUSwOGlIwHU3VidHlw
+ZZRLA4aUjAtIZWlnaHQgKGNtKZRLA4aUjApXaWR0aCAoY20plEsDhpR0lGhJjARUeXBllEsBhpSF
+lHViaB8pgZR9lChoIn2UKGgkaCVK/////4aUaCdOSv7///+GlGgpiUr+////hpRoDX2UaBpLA3Vo
+LCiMA0FnZZRLAoaUjA5CdXNpbmVzc1RyYXZlbJRLAYaUjApEZXBhcnRtZW50lEsBhpSMEERpc3Rh
+bmNlRnJvbUhvbWWUSwKGlIwJRWR1Y2F0aW9ulEsBhpSMBkdlbmRlcpRLAYaUjAhKb2JMZXZlbJRL
+AoaUjAdKb2JSb2xllEsBhpSMD0pvYlNhdGlzZmFjdGlvbpRLAoaUjA1NYXJpdGFsU3RhdHVzlEsB
+hpSMDU1vbnRobHlJbmNvbWWUSwKGlIwIT3ZlclRpbWWUSwGGlIwRUGVyY2VudFNhbGFyeUhpa2WU
+SwKGlIwRUGVyZm9ybWFuY2VSYXRpbmeUSwKGlIwQU3RvY2tPcHRpb25MZXZlbJRLAYaUjBFUb3Rh
+bFdvcmtpbmdZZWFyc5RLAoaUjA5ZZWFyc0F0Q29tcGFueZRLAoaUjBdZZWFyc1NpbmNlTGFzdFBy
+b21vdGlvbpRLAoaUdJRoSCloSYwJQXR0cml0aW9ulEsBhpSFlHViaB8pgZR9lChoIn2UKGgkaCVK
+/////4aUaCdOSv7///+GlGgpiUr+////hpRoDX2UaBpLA3VoLCiMA2FnZZRLAYaUjAltZW5vcGF1
+c2WUSwGGlIwKdHVtb3Itc2l6ZZRLAYaUjAlpbnYtbm9kZXOUSwGGlIwJbm9kZS1jYXBzlEsBhpSM
+CWRlZy1tYWxpZ5RLAYaUjAZicmVhc3SUSwGGlIwLYnJlYXN0LXF1YWSUSwGGlIwIaXJyYWRpYXSU
+SwGGlHSUaEgpaEmMCnJlY3VycmVuY2WUSwGGlIWUdWJoHymBlH2UKGgifZQoaCRoJUr/////hpRo
+J05K/v///4aUaCmJSv7///+GlGgNfZRoGksDdWgsKIwDbWN2lEsChpSMB2Fsa3Bob3OUSwKGlIwE
+c2dwdJRLAoaUjARzZ290lEsChpSMB2dhbW1hZ3SUSwKGlIwGZHJpbmtzlEsChpR0lGhIKWhJjAhz
+ZWxlY3RvcpRLAYaUhZR1YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgnTkr+////hpRoKYlK/v//
+/4aUaA19lGgaSwN1aCwojAZidXlpbmeUSwGGlIwFbWFpbnSUSwGGlIwFZG9vcnOUSwGGlIwHcGVy
+c29uc5RLAYaUjAhsdWdfYm9vdJRLAYaUjAZzYWZldHmUSwGGlHSUaEgpaEmMA2NhcpRLAYaUhZR1
+YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgnTkr+////hpRoKYlK/v///4aUaA19lGgaSwN1aCwo
+jANhZ2WUSwKGlIwGZ2VuZGVylEsBhpSMCmNoZXN0IHBhaW6USwGGlIwIcmVzdCBTQlCUSwKGlIwL
+Y2hvbGVzdGVyb2yUSwKGlIwZZmFzdGluZyBibG9vZCBzdWdhciA+IDEyMJRLAYaUjAhyZXN0IEVD
+R5RLAYaUjAZtYXggSFKUSwKGlIwNZXhlcmMgaW5kIGFuZ5RLAYaUjA5TVCBieSBleGVyY2lzZZRL
+AoaUjBFzbG9wZSBwZWFrIGV4YyBTVJRLAYaUjBVtYWpvciB2ZXNzZWxzIGNvbG9yZWSUSwKGlIwE
+dGhhbJRLAYaUdJRoSCloSYwSZGlhbWV0ZXIgbmFycm93aW5nlEsBhpSFlHViaB8pgZR9lChoIn2U
+KGgkaCVK/////4aUaCdOSv7///+GlGgpiUr+////hpRoDX2UaBpLA3VoLCiMBENSSU2USwKGlIwC
+Wk6USwKGlIwFSU5EVVOUSwKGlIwEQ0hBU5RLAoaUjANOT1iUSwKGlIwCUk2USwKGlIwDQUdFlEsC
+hpSMA0RJU5RLAoaUjANSQUSUSwKGlIwDVEFYlEsChpSMB1BUUkFUSU+USwKGlIwBQpRLAoaUjAVM
+U1RBVJRLAoaUdJRoSCloSYwETUVEVpRLAoaUhZR1YmV1Lg==
+</properties>
+		<properties node_id="2" format="literal">{'auto_apply': True, 'binary_trees': True, 'controlAreaVisible': True, 'learner_name': '', 'limit_depth': True, 'limit_majority': False, 'limit_min_internal': False, 'limit_min_leaf': False, 'max_depth': 1, 'min_internal': 5, 'min_leaf': 4, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xcf\x00\x00\x01\x82\x00\x00\x01\xfd\x00\x00\x02\x9e\x00\x00\x00\xcf\x00\x00\x01\x82\x00\x00\x01\xfd\x00\x00\x02\x9e\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x00\xcf\x00\x00\x01\x82\x00\x00\x01\xfd\x00\x00\x02\x9e', 'sufficient_majority': 95, '__version__': 1}</properties>
+		<properties node_id="3" format="literal">{'auto_apply': True, 'binary_trees': True, 'controlAreaVisible': True, 'learner_name': '', 'limit_depth': True, 'limit_majority': False, 'limit_min_internal': False, 'limit_min_leaf': False, 'max_depth': 2, 'min_internal': 5, 'min_leaf': 4, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xce\x00\x00\x01c\x00\x00\x01\xfe\x00\x00\x02\x9f\x00\x00\x00\xcf\x00\x00\x01\x82\x00\x00\x01\xfd\x00\x00\x02\x9e\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x00\xcf\x00\x00\x01\x82\x00\x00\x01\xfd\x00\x00\x02\x9e', 'sufficient_majority': 95, '__version__': 1}</properties>
+		<properties node_id="4" format="literal">{'auto_apply': True, 'binary_trees': True, 'controlAreaVisible': True, 'learner_name': '', 'limit_depth': True, 'limit_majority': False, 'limit_min_internal': False, 'limit_min_leaf': False, 'max_depth': 3, 'min_internal': 5, 'min_leaf': 4, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xce\x00\x00\x01c\x00\x00\x01\xfe\x00\x00\x02\x9f\x00\x00\x00\xcf\x00\x00\x01\x82\x00\x00\x01\xfd\x00\x00\x02\x9e\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x00\xcf\x00\x00\x01\x82\x00\x00\x01\xfd\x00\x00\x02\x9e', 'sufficient_majority': 95, '__version__': 1}</properties>
+		<properties node_id="5" format="literal">{'auto_apply': True, 'binary_trees': True, 'controlAreaVisible': True, 'learner_name': '', 'limit_depth': True, 'limit_majority': False, 'limit_min_internal': False, 'limit_min_leaf': False, 'max_depth': 3, 'min_internal': 5, 'min_leaf': 4, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xce\x00\x00\x01c\x00\x00\x01\xfe\x00\x00\x02\x9f\x00\x00\x00\xcf\x00\x00\x01\x82\x00\x00\x01\xfd\x00\x00\x02\x9e\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x00\xcf\x00\x00\x01\x82\x00\x00\x01\xfd\x00\x00\x02\x9e', 'sufficient_majority': 95, '__version__': 1}</properties>
+		<properties node_id="6" format="pickle">gASVWRIAAAAAAAB9lCiMFGNvbXBhcmlzb25fY3JpdGVyaW9ulEsAjBJjb250cm9sQXJlYVZpc2li
+bGWUiIwNY3Zfc3RyYXRpZmllZJSJjAduX2ZvbGRzlEsCjAluX3JlcGVhdHOUSwOMCnJlc2FtcGxp
+bmeUSwSMBHJvcGWURz+5mZmZmZmajAtzYW1wbGVfc2l6ZZRLAowTc2F2ZWRXaWRnZXRHZW9tZXRy
+eZRDQgHZ0MsAAwAAAAAAEQAAACEAAALUAAACrQAAABIAAABAAAAC0wAAAqwAAAAAAAAAAAeAAAAA
+EgAAAEAAAALTAAACrJSMEnNodWZmbGVfc3RyYXRpZmllZJSJjAh1c2Vfcm9wZZSJjAtzY29yZV90
+YWJsZZR9lIwMc2hvd25fc2NvcmVzlI+UKIwCRjGUjAlQcmVjaXNpb26UjAZSZWNhbGyUjARSTVNF
+lIwDTVNFlIwCQ0GUjAJSMpSMA01BRZSMA0FVQ5SQc4wLX192ZXJzaW9uX1+USwOMEGNvbnRleHRf
+c2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2
+YWx1ZXOUfZQojA9jbGFzc19zZWxlY3Rpb26UjBYoQXZlcmFnZSBvdmVyIGNsYXNzZXMplEr/////
+hpSMDGZvbGRfZmVhdHVyZZROSv7///+GlIwVZm9sZF9mZWF0dXJlX3NlbGVjdGVklIlK/v///4aU
+aA19lGgaSwN1jAphdHRyaWJ1dGVzlCiMB0FsY29ob2yUSwKGlIwKTWFsaWMgQWNpZJRLAoaUjANB
+c2iUSwKGlIwRQWxjYWxpbml0eSBvZiBhc2iUSwKGlIwJTWFnbmVzaXVtlEsChpSMDVRvdGFsIHBo
+ZW5vbHOUSwKGlIwKRmxhdmFub2lkc5RLAoaUjBROb25mbGF2YW5vaWQgcGhlbm9sc5RLAoaUjA9Q
+cm9hbnRob2N5YW5pbnOUSwKGlIwPQ29sb3IgaW50ZW5zaXR5lEsChpSMA0h1ZZRLAoaUjBxPRDI4
+MC9PRDMxNSBvZiBkaWx1dGVkIHdpbmVzlEsChpSMB1Byb2xpbmWUSwKGlHSUjAVtZXRhc5QpjApj
+bGFzc192YXJzlIwEV2luZZRLAYaUhZR1YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgnTkr+////
+hpRoKYlK/v///4aUaA19lGgaSwN1aCwojA1maXhlZCBhY2lkaXR5lEsChpSMEHZvbGF0aWxlIGFj
+aWRpdHmUSwKGlIwLY2l0cmljIGFjaWSUSwKGlIwOcmVzaWR1YWwgc3VnYXKUSwKGlIwJY2hsb3Jp
+ZGVzlEsChpSME2ZyZWUgc3VsZnVyIGRpb3hpZGWUSwKGlIwUdG90YWwgc3VsZnVyIGRpb3hpZGWU
+SwKGlIwHZGVuc2l0eZRLAoaUjAJwSJRLAoaUjAlzdWxwaGF0ZXOUSwKGlIwHYWxjb2hvbJRLAoaU
+dJRoSCloSYwHcXVhbGl0eZRLAoaUhZR1YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgnTkr+////
+hpRoKYlK/v///4aUaA19lGgaSwN1aCyMB091dGxvb2uUSwGGlIwHQ29tcGFueZRLAYaUjAhTYWls
+Ym9hdJRLAYaUh5RoSCloSYwEU2FpbJRLAYaUhZR1YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgn
+Tkr+////hpRoKYlK/v///4aUaA19lGgaSwN1aCwojAFhlEsBhpSMAWKUSwGGlIwBY5RLAYaUjAFk
+lEsBhpSMAWWUSwGGlIwBZpRLAYaUdJRoSCloSYwBeZRLAYaUhZR1YmgfKYGUfZQoaCJ9lChoJGgl
+Sv////+GlGgnjAVNb250aJRLZYaUaCmJSv7///+GlGgNfZRoGksDdWgsKIwEVHlwZZRLAYaUjAZI
+YXMgRkKUSwGGlIwPQmFja2VkIFByb2plY3RzlEsChpSMEVByZXZpb3VzIFByb2plY3RzlEsChpSM
+EENyZWF0b3IgRGVzYyBMZW6USwKGlIwJVGl0bGUgTGVulEsChpSMBEdvYWyUSwKGlIwIRHVyYXRp
+b26USwKGlIwNUGxlZGdlIExldmVsc5RLAoaUjBBNaW4gUGxlZGdlIFRpZXJzlEsChpSMEE1heCBQ
+bGVkZ2UgVGllcnOUSwKGlIwNUHJvaiBEZXNjIExlbpRLAoaUjAZJbWFnZXOUSwKGlIwGVmlkZW9z
+lEsChpSMCUhhcyBWaWRlb5RLAoaUdJRoSCiMA1VSTJRLA4aUjAVUaXRsZZRLA4aUjARZZWFylEsD
+hpRomksBhpR0lGhJjAZGdW5kZWSUSwGGlIWUdWJoHymBlH2UKGgifZQoaCRoJUr/////hpRoJ05K
+/v///4aUaCmJSv7///+GlGgNfZRoGksDdWgsjAZzdGF0dXOUSwGGlIwDYWdllEsBhpSMA3NleJRL
+AYaUh5RoSCloSYwIc3Vydml2ZWSUSwGGlIWUdWJoHymBlH2UKGgifZQoaCRoJUr/////hpRoJ05K
+/v///4aUaCmJSv7///+GlGgNfZRoGksDdWgsKIwMc2VwYWwgbGVuZ3RolEsChpSMC3NlcGFsIHdp
+ZHRolEsChpSMDHBldGFsIGxlbmd0aJRLAoaUjAtwZXRhbCB3aWR0aJRLAoaUdJRoSCloSYwEaXJp
+c5RLAYaUhZR1YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgnTkr+////hpRoKYlK/v///4aUaA19
+lGgaSwN1aCwojBNoYW5kaWNhcHBlZC1pbmZhbnRzlEsBhpSMGndhdGVyLXByb2plY3QtY29zdC1z
+aGFyaW5nlEsBhpSMIWFkb3B0aW9uLW9mLXRoZS1idWRnZXQtcmVzb2x1dGlvbpRLAYaUjBRwaHlz
+aWNpYW4tZmVlLWZyZWV6ZZRLAYaUjA9lbC1zYWx2YWRvci1haWSUSwGGlIwbcmVsaWdpb3VzLWdy
+b3Vwcy1pbi1zY2hvb2xzlEsBhpSMF2FudGktc2F0ZWxsaXRlLXRlc3QtYmFulEsBhpSMGWFpZC10
+by1uaWNhcmFndWFuLWNvbnRyYXOUSwGGlIwKbXgtbWlzc2lsZZRLAYaUjAtpbW1pZ3JhdGlvbpRL
+AYaUjBxzeW5mdWVscy1jb3Jwb3JhdGlvbi1jdXRiYWNrlEsBhpSMEmVkdWNhdGlvbi1zcGVuZGlu
+Z5RLAYaUjBZzdXBlcmZ1bmQtcmlnaHQtdG8tc3VllEsBhpSMBWNyaW1llEsBhpSMEWR1dHktZnJl
+ZS1leHBvcnRzlEsBhpSMJmV4cG9ydC1hZG1pbmlzdHJhdGlvbi1hY3Qtc291dGgtYWZyaWNhlEsB
+hpR0lGhIKWhJjAVwYXJ0eZRLAYaUhZR1YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgnTkr+////
+hpRoKYlK/v///4aUaA19lGgaSwN1aCwojA9DbHVtcCB0aGlja25lc3OUSwKGlIwOVW5pZl9DZWxs
+X1NpemWUSwKGlIwPVW5pZl9DZWxsX1NoYXBllEsChpSMEU1hcmdpbmFsX0FkaGVzaW9ulEsChpSM
+EFNpbmdsZV9DZWxsX1NpemWUSwKGlIwLQmFyZV9OdWNsZWmUSwKGlIwQQmxhbmRfQ2hyb21hdGlu
+ZZRLAoaUjA9Ob3JtYWxfTnVjbGVvbGmUSwKGlIwHTWl0b3Nlc5RLAoaUdJRoSCloSYwEdHlwZZRL
+AYaUhZR1YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgnTkr+////hpRoKYlK/v///4aUaA19lGga
+SwN1aCwojAZGYWJyaWOUSwGGlIwMUmltIGRpYW1ldGVylEsBhpSMCFJpbSB0eXBllEsBhpSMDVNo
+b3VsZGVyIHR5cGWUSwGGlIwSSGFuZGxlcyBpbiBwcm9maWxllEsBhpSMEkhhbmRsZXMgaW4gc2Vj
+dGlvbpRLAYaUjAlOZWNrIHR5cGWUSwGGlIwJQm9keSB0eXBllEsBhpSMCUJhc2UgdHlwZZRLAYaU
+jBBDYXBhY2l0eSAoYXZnIGwplEsBhpR0lGhIKIwDVVJMlEsDhpSMBE5hbWWUSwOGlIwHU3VidHlw
+ZZRLA4aUjAtIZWlnaHQgKGNtKZRLA4aUjApXaWR0aCAoY20plEsDhpR0lGhJjARUeXBllEsBhpSF
+lHViaB8pgZR9lChoIn2UKGgkaCVK/////4aUaCdOSv7///+GlGgpiUr+////hpRoDX2UaBpLA3Vo
+LCiMA0FnZZRLAoaUjA5CdXNpbmVzc1RyYXZlbJRLAYaUjApEZXBhcnRtZW50lEsBhpSMEERpc3Rh
+bmNlRnJvbUhvbWWUSwKGlIwJRWR1Y2F0aW9ulEsBhpSMBkdlbmRlcpRLAYaUjAhKb2JMZXZlbJRL
+AoaUjAdKb2JSb2xllEsBhpSMD0pvYlNhdGlzZmFjdGlvbpRLAoaUjA1NYXJpdGFsU3RhdHVzlEsB
+hpSMDU1vbnRobHlJbmNvbWWUSwKGlIwIT3ZlclRpbWWUSwGGlIwRUGVyY2VudFNhbGFyeUhpa2WU
+SwKGlIwRUGVyZm9ybWFuY2VSYXRpbmeUSwKGlIwQU3RvY2tPcHRpb25MZXZlbJRLAYaUjBFUb3Rh
+bFdvcmtpbmdZZWFyc5RLAoaUjA5ZZWFyc0F0Q29tcGFueZRLAoaUjBdZZWFyc1NpbmNlTGFzdFBy
+b21vdGlvbpRLAoaUdJRoSCloSYwJQXR0cml0aW9ulEsBhpSFlHViaB8pgZR9lChoIn2UKGgkaCVK
+/////4aUaCdOSv7///+GlGgpiUr+////hpRoDX2UaBpLA3VoLCiMA2FnZZRLAYaUjAltZW5vcGF1
+c2WUSwGGlIwKdHVtb3Itc2l6ZZRLAYaUjAlpbnYtbm9kZXOUSwGGlIwJbm9kZS1jYXBzlEsBhpSM
+CWRlZy1tYWxpZ5RLAYaUjAZicmVhc3SUSwGGlIwLYnJlYXN0LXF1YWSUSwGGlIwIaXJyYWRpYXSU
+SwGGlHSUaEgpaEmMCnJlY3VycmVuY2WUSwGGlIWUdWJoHymBlH2UKGgifZQoaCRoJUr/////hpRo
+J05K/v///4aUaCmJSv7///+GlGgNfZRoGksDdWgsKIwDbWN2lEsChpSMB2Fsa3Bob3OUSwKGlIwE
+c2dwdJRLAoaUjARzZ290lEsChpSMB2dhbW1hZ3SUSwKGlIwGZHJpbmtzlEsChpR0lGhIKWhJjAhz
+ZWxlY3RvcpRLAYaUhZR1YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgnTkr+////hpRoKYlK/v//
+/4aUaA19lGgaSwN1aCwojAZidXlpbmeUSwGGlIwFbWFpbnSUSwGGlIwFZG9vcnOUSwGGlIwHcGVy
+c29uc5RLAYaUjAhsdWdfYm9vdJRLAYaUjAZzYWZldHmUSwGGlHSUaEgpaEmMA2NhcpRLAYaUhZR1
+YmgfKYGUfZQoaCJ9lChoJGglSv////+GlGgnTkr+////hpRoKYlK/v///4aUaA19lGgaSwN1aCwo
+jANhZ2WUSwKGlIwGZ2VuZGVylEsBhpSMCmNoZXN0IHBhaW6USwGGlIwIcmVzdCBTQlCUSwKGlIwL
+Y2hvbGVzdGVyb2yUSwKGlIwZZmFzdGluZyBibG9vZCBzdWdhciA+IDEyMJRLAYaUjAhyZXN0IEVD
+R5RLAYaUjAZtYXggSFKUSwKGlIwNZXhlcmMgaW5kIGFuZ5RLAYaUjA5TVCBieSBleGVyY2lzZZRL
+AoaUjBFzbG9wZSBwZWFrIGV4YyBTVJRLAYaUjBVtYWpvciB2ZXNzZWxzIGNvbG9yZWSUSwKGlIwE
+dGhhbJRLAYaUdJRoSCloSYwSZGlhbWV0ZXIgbmFycm93aW5nlEsBhpSFlHViaB8pgZR9lChoIn2U
+KGgkaCVK/////4aUaCdOSv7///+GlGgpiUr+////hpRoDX2UaBpLA3VoLCiMBENSSU2USwKGlIwC
+Wk6USwKGlIwFSU5EVVOUSwKGlIwEQ0hBU5RLAoaUjANOT1iUSwKGlIwCUk2USwKGlIwDQUdFlEsC
+hpSMA0RJU5RLAoaUjANSQUSUSwKGlIwDVEFYlEsChpSMB1BUUkFUSU+USwKGlIwBQpRLAoaUjAVM
+U1RBVJRLAoaUdJRoSCloSYwETUVEVpRLAoaUhZR1YmV1Lg==
+</properties>
+		<properties node_id="7" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\x0f\x00\x00\x00W\x00\x00\x03\x9e\x00\x00\x03=\x00\x00\x00\x0f\x00\x00\x00W\x00\x00\x03\x9e\x00\x00\x03=\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x00\x0f\x00\x00\x00W\x00\x00\x03\x9e\x00\x00\x03=', 'scriptLibrary': [{'name': 'Validation_curve.py', 'script': '# Plot Validation Curve\n#######################\n# Settings:\nscore = "MSE"                # "R2" or "MSE"; only for regression\nsave_results = False        # True: save Excelfile with results; False: don\'t save\nfile_path = "E:/Downloads/" # file path for save_results\n#                             e.g. "E:/Downloads/" - with slash (!) also in Windows (and trailing slash)\n#####################################################\n# File: Validation_curve.py\n\n"""\n* Widget input: Predictions from Test &amp; Score with Cross validation\n  and optional: Predictions from Test &amp; Score with test on training data\n* Widget output: -\n\n* Computes and shows validation curve for learners out of cross validation by widget Test &amp; Score\n* Uses standard error to indicate variability of the results.\n* Scores are CA (classification accuracy) for classification and R_squared (R2) or MSE for regression.\n* Uses names of learners as x-labels.\n\nUsage: \n* mainly to compare different learner settings for manual hyper parameter optimization.\n* e.g. several learners of the same type, but with different values of a certain hyper parameter\n* Use name in learner widget to indicate different learners\n\n"""\n\nimport numpy as np\nfrom Orange.data import Table\nfrom Orange.evaluation import TestOnTestData\nimport Orange\nfrom sklearn import metrics\nimport pandas as pd\nfrom datetime import datetime\nimport matplotlib.pyplot as plt\n\ndata = in_data.copy()\nn = len(data)\ny_true = data.Y\nn_meta_cols = len(data.domain.metas)\n\nif data.domain.class_var.is_continuous:\n    problem = "reg"\n    n_classes = 0\n    n_learner = n_meta_cols-1\nelse:\n    problem = "class"\n    n_classes = len(data.domain.class_var.values)\n    n_learner = int((n_meta_cols-1)/(n_classes+1))\n\nif in_object == None:\n    show_traindata = False\nelse:\n    show_traindata = True\n    traindata = in_object.copy()\n\nfolds = data.metas[:, n_learner*(n_classes+1)]  # column with folds-indicator\nk = len(np.unique(folds))  # number of folds\n\nca = np.zeros([n_learner,k])\nmse= np.zeros([n_learner,k])\nr2 = np.zeros([n_learner,k])\nr2_total = np.zeros([n_learner])\nca_train = np.zeros([n_learner,k])\nmse_train = np.zeros([n_learner,k])\nr2_train = np.zeros([n_learner,k])\n\n# Split data in folds and calculate metrics\n# -----------------------------------------\nif problem == "class":\n    for fold in range(k):\n        y_test = y_true[folds==fold].astype(int)\n        y_pred_test = data.metas[:,0:n_learner][folds==fold].astype(int)\n        for learner in range(n_learner):  # calculate metrics\n            # Metrics see https://scikit-learn.org/stable/modules/classes.html#module-sklearn.metrics\n            # use only CA to avoid problems with multiclass labels\n            ca[learner, fold] = metrics.accuracy_score(y_test, y_pred_test[:, learner])\n\nelif problem == "reg":\n    for fold in range(k):\n        y_test = y_true[folds==fold]\n        y_pred_test = data.metas[:,0:n_learner][folds==fold]\n        for learner in range(n_learner):\n            mse[learner,fold] = metrics.mean_squared_error(y_test, y_pred_test[:, learner])\n            r2[learner,fold] = metrics.r2_score(y_test, y_pred_test[:, learner])\n            r2_total[learner] = metrics.r2_score(y_true, data.metas[:, learner])\n\nif show_traindata: \n    if problem == "class":\n        y_train = traindata.Y.astype(int)\n        y_pred_train = traindata.metas[:,0:n_learner].astype(int)\n        for learner in range(n_learner):\n            ca_train[learner] = metrics.accuracy_score(y_train, y_pred_train[:, learner])\n    elif problem == "reg":\n        y_train = traindata.Y\n        y_pred_train = traindata.metas[:,0:n_learner]\n        for learner in range(n_learner):\n            mse_train[learner] = metrics.mean_squared_error(y_train, y_pred_train[:, learner])\n            r2_train[learner] = metrics.r2_score(y_train, y_pred_train[:, learner])\n\n# Aggregate results (means and standard errors)\n#----------------------------------------------\nresult_table = pd.DataFrame([])\n#result_table["Models"] = [F"{learners[learner]}" for learner,_ in enumerate(learners)]\nresult_table["Models"] = [F"{data.domain.metas[learner]}" for learner in range(n_learner)]\n#print(result_table["Models"])\nif problem == "class":\n    result_table["CA"] = [ca[learner].mean() for learner in range(n_learner)]\n    result_table["CA-se"] = [ca[learner].std(ddof=1)/k for learner in range(n_learner)]\n    if show_traindata: result_table["CA_train"] = [ca_train[learner].mean() for learner in range(n_learner)]\n    \nif problem == "reg":\n    result_table["MSE"] = [mse[learner].mean() for learner in range(n_learner)]\n    result_table["MSE-se"] = [mse[learner].std(ddof=1)/k for learner in range(n_learner)]\n    result_table["R2"] = [r2[learner].mean() for learner in range(n_learner)]\n    result_table["R2"] = r2_total\n    result_table["R2-se"] = [r2[learner].std(ddof=1)/k for learner in range(n_learner)]\n    if show_traindata:\n        result_table["MSE_train"] = [mse_train[learner].mean() for learner in range(n_learner)]\n        result_table["R2_train"] = [r2_train[learner].mean() for learner in range(n_learner)]\n\n# Print to table and save data\n#-----------------------------\nprint("---------------------------")\nprint("Results of Cross validation")\nprint("---------------------------")\nprint("Number of instances: ", len(data))\nprint("Number of folds    : ", k)\nprint("")\nif problem == "class":\n    print(result_table)\nif problem == "reg":\n    print(result_table[["Models", "MSE", "MSE-se", "R2", "R2-se"]])\n    if show_traindata: print(result_table[["Models", "MSE_train", "R2_train"]])\n\nif save_results:\n    file_name_path = file_path + "Results-" + datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".xlsx"\n    print("Results in: ",file_name_path)\n    with pd.ExcelWriter(file_name_path) as writer:\n        result_table.to_excel(writer)\n\n# Create Diagram\n#---------------\nfig = plt.figure(figsize=(8,6))\nplt.title("Validation Curve")\nlw = 2\nif problem == "class":\n    plt.ylabel("CA")\n    if show_traindata: plt.plot(\n        result_table["Models"].values, result_table["CA_train"].values, label="Training score", color="darkorange", lw=lw\n    )\n    plt.plot(\n        result_table["Models"].values, result_table["CA"].values, label="Cross-validation score", color="navy"\n    )\n    plt.fill_between(\n        result_table["Models"].values,\n        result_table["CA"].values - result_table["CA-se"].values,\n        result_table["CA"].values + result_table["CA-se"].values,\n        alpha=0.2,\n        color="navy",\n        lw=lw,\n    )\n    plt.legend(loc="best")\n    plt.show()\n    \nif problem == "reg":\n    if score == "MSE":\n        plt.ylabel("MSE")\n        if show_traindata: plt.plot(\n            result_table["Models"].values, result_table["MSE_train"].values, label="Training score", color="darkorange", lw=lw\n        )\n        plt.plot(\n            result_table["Models"].values, result_table["MSE"].values, label="Cross-validation score", color="navy"\n        )\n        plt.fill_between(\n            result_table["Models"].values,\n            result_table["MSE"].values - result_table["MSE-se"].values,\n            result_table["MSE"].values + result_table["MSE-se"].values,\n            alpha=0.2,\n            color="navy",\n            lw=lw,\n        )\n        plt.legend(loc="best")\n        plt.show()\n    else:\n        plt.ylabel("R2")\n        if show_traindata: plt.plot(\n            result_table["Models"].values, result_table["R2_train"].values, label="Training score", color="darkorange", lw=lw\n        )\n        plt.plot(\n            result_table["Models"].values, result_table["R2"].values, label="Cross-validation score", color="navy"\n        )\n        plt.fill_between(\n            result_table["Models"].values,\n            result_table["R2"].values - result_table["R2-se"].values,\n            result_table["R2"].values + result_table["R2-se"].values,\n            alpha=0.2,\n            color="navy",\n            lw=lw,\n        )\n        plt.legend(loc="best")\n        plt.show()\n\n\n', 'filename': 'C:/Users/00613/Sync-Austausch/_ML/_Orange/Orange-Python-Scripts/Validation_curve.py'}], 'scriptText': '# Plot Validation Curve\n#######################\n# Settings:\nscore = "R2"                # "R2" or "MSE"; only for regression\nsave_results = False        # True: save Excelfile with results; False: don\'t save\nfile_path = "E:/Downloads/" # file path for save_results\n#                             e.g. "E:/Downloads/" - with slash (!) also in Windows (and trailing slash)\n#####################################################\n# File: Validation_curve.py\n\n"""\n* Widget input: Predictions from Test &amp; Score with Cross validation\n  and optional: Predictions from Test &amp; Score with test on training data\n* Widget output: -\n\n* Computes and shows validation curve for learners out of cross validation by widget Test &amp; Score\n* Uses standard error to indicate variability of the results.\n* Scores are CA (classification accuracy) for classification and R_squared (R2) or MSE for regression.\n* Uses names of learners as x-labels.\n\nUsage: \n* mainly to compare different learner settings for manual hyper parameter optimization.\n* e.g. several learners of the same type, but with different values of a certain hyper parameter\n* Use name in learner widget to indicate different learners\n\n"""\n\nimport numpy as np\nfrom Orange.data import Table\nfrom Orange.evaluation import TestOnTestData\nimport Orange\nfrom sklearn import metrics\nimport pandas as pd\nfrom datetime import datetime\nimport matplotlib.pyplot as plt\n\ndata = in_data.copy()\nn = len(data)\ny_true = data.Y\nn_meta_cols = len(data.domain.metas)\n\nif data.domain.class_var.is_continuous:\n    problem = "reg"\n    n_classes = 0\n    n_learner = n_meta_cols-1\nelse:\n    problem = "class"\n    n_classes = len(data.domain.class_var.values)\n    n_learner = int((n_meta_cols-1)/(n_classes+1))\n\nif in_object == None:\n    show_traindata = False\nelse:\n    show_traindata = True\n    traindata = in_object.copy()\n\nfolds = data.metas[:, n_learner*(n_classes+1)]  # column with folds-indicator\nk = len(np.unique(folds))  # number of folds\n\nca = np.zeros([n_learner,k])\nmse= np.zeros([n_learner,k])\nr2 = np.zeros([n_learner,k])\nr2_total = np.zeros([n_learner])\nca_train = np.zeros([n_learner,k])\nmse_train = np.zeros([n_learner,k])\nr2_train = np.zeros([n_learner,k])\n\n# Split data in folds and calculate metrics\n# -----------------------------------------\nif problem == "class":\n    for fold in range(k):\n        y_test = y_true[folds==fold].astype(int)\n        y_pred_test = data.metas[:,0:n_learner][folds==fold].astype(int)\n        for learner in range(n_learner):  # calculate metrics\n            # Metrics see https://scikit-learn.org/stable/modules/classes.html#module-sklearn.metrics\n            # use only CA to avoid problems with multiclass labels\n            ca[learner, fold] = metrics.accuracy_score(y_test, y_pred_test[:, learner])\n\nelif problem == "reg":\n    for fold in range(k):\n        y_test = y_true[folds==fold]\n        y_pred_test = data.metas[:,0:n_learner][folds==fold]\n        for learner in range(n_learner):\n            mse[learner,fold] = metrics.mean_squared_error(y_test, y_pred_test[:, learner])\n            r2[learner,fold] = metrics.r2_score(y_test, y_pred_test[:, learner])\n            r2_total[learner] = metrics.r2_score(y_true, data.metas[:, learner])\n\nif show_traindata: \n    if problem == "class":\n        y_train = traindata.Y.astype(int)\n        y_pred_train = traindata.metas[:,0:n_learner].astype(int)\n        for learner in range(n_learner):\n            ca_train[learner] = metrics.accuracy_score(y_train, y_pred_train[:, learner])\n    elif problem == "reg":\n        y_train = traindata.Y\n        y_pred_train = traindata.metas[:,0:n_learner]\n        for learner in range(n_learner):\n            mse_train[learner] = metrics.mean_squared_error(y_train, y_pred_train[:, learner])\n            r2_train[learner] = metrics.r2_score(y_train, y_pred_train[:, learner])\n\n# Aggregate results (means and standard errors)\n#----------------------------------------------\nresult_table = pd.DataFrame([])\n#result_table["Models"] = [F"{learners[learner]}" for learner,_ in enumerate(learners)]\nresult_table["Models"] = [F"{data.domain.metas[learner]}" for learner in range(n_learner)]\n#print(result_table["Models"])\nif problem == "class":\n    result_table["CA"] = [ca[learner].mean() for learner in range(n_learner)]\n    result_table["CA-se"] = [ca[learner].std(ddof=1)/k for learner in range(n_learner)]\n    if show_traindata: result_table["CA_train"] = [ca_train[learner].mean() for learner in range(n_learner)]\n    \nif problem == "reg":\n    result_table["MSE"] = [mse[learner].mean() for learner in range(n_learner)]\n    result_table["MSE-se"] = [mse[learner].std(ddof=1)/k for learner in range(n_learner)]\n    result_table["R2"] = [r2[learner].mean() for learner in range(n_learner)]\n    result_table["R2"] = r2_total\n    result_table["R2-se"] = [r2[learner].std(ddof=1)/k for learner in range(n_learner)]\n    if show_traindata:\n        result_table["MSE_train"] = [mse_train[learner].mean() for learner in range(n_learner)]\n        result_table["R2_train"] = [r2_train[learner].mean() for learner in range(n_learner)]\n\n# Print to table and save data\n#-----------------------------\nprint("---------------------------")\nprint("Results of Cross validation")\nprint("---------------------------")\nprint("Number of instances: ", len(data))\nprint("Number of folds    : ", k)\nprint("")\nif problem == "class":\n    print(result_table)\nif problem == "reg":\n    print(result_table[["Models", "MSE", "MSE-se", "R2", "R2-se"]])\n    if show_traindata: print(result_table[["Models", "MSE_train", "R2_train"]])\n\nif save_results:\n    file_name_path = file_path + "Results-" + datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".xlsx"\n    print("Results in: ",file_name_path)\n    with pd.ExcelWriter(file_name_path) as writer:\n        result_table.to_excel(writer)\n\n# Create Diagram\n#---------------\nfig = plt.figure(figsize=(8,6))\nplt.title("Validation Curve")\nlw = 2\nif problem == "class":\n    plt.ylabel("CA")\n    if show_traindata: plt.plot(\n        result_table["Models"].values, result_table["CA_train"].values, label="Training score", color="darkorange", lw=lw\n    )\n    plt.plot(\n        result_table["Models"].values, result_table["CA"].values, label="Cross-validation score", color="navy"\n    )\n    plt.fill_between(\n        result_table["Models"].values,\n        result_table["CA"].values - result_table["CA-se"].values,\n        result_table["CA"].values + result_table["CA-se"].values,\n        alpha=0.2,\n        color="navy",\n        lw=lw,\n    )\n    plt.legend(loc="best")\n    plt.show()\n    \nif problem == "reg":\n    if score == "MSE":\n        plt.ylabel("MSE")\n        if show_traindata: plt.plot(\n            result_table["Models"].values, result_table["MSE_train"].values, label="Training score", color="darkorange", lw=lw\n        )\n        plt.plot(\n            result_table["Models"].values, result_table["MSE"].values, label="Cross-validation score", color="navy"\n        )\n        plt.fill_between(\n            result_table["Models"].values,\n            result_table["MSE"].values - result_table["MSE-se"].values,\n            result_table["MSE"].values + result_table["MSE-se"].values,\n            alpha=0.2,\n            color="navy",\n            lw=lw,\n        )\n        plt.legend(loc="best")\n        plt.show()\n    else:\n        plt.ylabel("R2")\n        if show_traindata: plt.plot(\n            result_table["Models"].values, result_table["R2_train"].values, label="Training score", color="darkorange", lw=lw\n        )\n        plt.plot(\n            result_table["Models"].values, result_table["R2"].values, label="Cross-validation score", color="navy"\n        )\n        plt.fill_between(\n            result_table["Models"].values,\n            result_table["R2"].values - result_table["R2-se"].values,\n            result_table["R2"].values + result_table["R2-se"].values,\n            alpha=0.2,\n            color="navy",\n            lw=lw,\n        )\n        plt.legend(loc="best")\n        plt.show()\n\n\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x01\x9c\x00\x00\x01#\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
