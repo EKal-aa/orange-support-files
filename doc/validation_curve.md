@@ -40,13 +40,14 @@ It is possible to realise a variation of hyperparameters (as shown here; max. tr
 
 Use one Test & Score Widget with Cross validation and connect it to the Data input of Validation curve Widget. 
 
-(Optional) use another Test & Score Widget with Test on Traindata and connect it to the Object input of Validation curve Widget. 
+(Optional) Use another Test & Score Widget with Test on Traindata and connect it to the Object input of Validation curve Widget. 
 
 In the diagram, the names of the learners as defined in the learner widget are used.
 
 ![](images/validation_curve_02.png)
 
 ## For classification, the Classification Accuracy (CA) is shown
+(In this example, one can see, that for max dapth of trees, a higher number as 2 increases only the performance on the training data, but not the (more important) performance in cross validation.)
 
 ![](images/validation_curve_03.png)
 
@@ -70,7 +71,7 @@ For classification problems, classification accuracy (CA) is used as performance
 
 ## save results = True
 
-With __save_results = True__ and defining the path __file_path = "E:/Downloads/"__ it is possible to save an excel file with the numerical results.
+With __save_results = True__ and defining the path __file_path = "E:/Downloads/"__ it is possible to save an excel file with the numerical results. Use (forward) slash in the path and a slash at the end of the path also in Windows (no backslash).
 
 ## replicable = True
 
